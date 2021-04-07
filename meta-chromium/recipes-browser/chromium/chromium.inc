@@ -35,8 +35,8 @@ LIBCPLUSPLUS = "-stdlib=libc++"
 # add it to TUNE_CCARGS as well to include it in CC/CXX variables which are respected.
 TUNE_CCARGS += "${LIBCPLUSPLUS}"
 
-inherit mime-xdg pythonnative
-DEPENDS += "python-setuptools-native"
+inherit mime-xdg python3native
+DEPENDS += "python3-setuptools-native"
 
 # Chromium itself is licensed under the 3-clause BSD license. However, it
 # depends upon several other projects whose copyright files are listed in
