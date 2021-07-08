@@ -22,7 +22,6 @@ SRC_URI += " \
     file://0001-Fixed-build-with-use_ozone-false.patch \
     file://fix-harfbuzz-supp-size-error.patch \
     file://fix-ruy-numeric-limits-error.patch \
-    file://fix-sql-virtualcursor-error.patch \
     file://0001-exception_handler.cc-Match-the-types-for-SIGSTKSZ.patch \
     file://a9831f1cbf93fb18dd951453635f488037454ce9.patch \
 "
