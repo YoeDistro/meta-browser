@@ -24,6 +24,13 @@ TOOLCHAIN:class-native = "clang"
 # https://github.com/kraj/meta-clang/issues/449).
 RUNTIME = "llvm"
 
+# meta-clang uses RUNTIME variable to add dependencies but does not add needed
+# compiler options since it expects compiler buildtime defaults to be chosen
+# based on RUNTIME variable which defaults to 'gnu' which means we have to
+# ensure right cxxflags and ldflags are set too for chromium irrespective of
+# disto defaults which could be 'gnu' or 'llvm'
+LIBCPLUSPLUS = "-stdlib=libc++"
+
 inherit mime-xdg pythonnative
 DEPENDS += "python-setuptools-native"
 
