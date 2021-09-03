@@ -1,0 +1,442 @@
+From f6b5f627c36e75de02935805bf11f6b1b70fc459 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 14:51:07 +0200
+Subject: [PATCH] python3: update shebangs in some other cases
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ docs/python3_migration.md                                   | 2 +-
+ .../android_deps/buildSrc/src/main/groovy/3ppFetch.template | 2 +-
+ .../third_party/rcssmin/docs/apidoc/rcssmin-pysrc.html      | 2 +-
+ .../third_party/rjsmin/docs/apidoc/rjsmin-pysrc.html        | 2 +-
+ .../google-endpoints/apitools/gen/command_registry.py       | 2 +-
+ .../google-endpoints/apitools/gen/gen_client_lib.py         | 2 +-
+ .../third_party/google-endpoints/libfuturize/fixer_util.py  | 2 +-
+ .../gsutil/gslib/tests/testcase/integration_testcase.py     | 2 +-
+ .../gsutil/gslib/vendored/boto/bin/launch_instance          | 2 +-
+ .../gslib/vendored/boto/boto/pyami/installers/ubuntu/ebs.py | 6 +++---
+ .../gslib/vendored/boto/docs/source/dynamodb2_tut.rst       | 4 ++--
+ .../third_party/apitools/apitools/gen/gen_client_lib.py     | 2 +-
+ .../third_party/gsutil/third_party/argcomplete/README.rst   | 4 ++--
+ .../gsutil/third_party/retry-decorator/README.rst           | 2 +-
+ .../catapult/third_party/pyserial/serial/__init__.py        | 2 +-
+ .../third_party/apitools/apitools/gen/command_registry.py   | 2 +-
+ .../third_party/apitools/apitools/gen/gen_client_lib.py     | 2 +-
+ .../gsutil_4.28/gsutil/third_party/argcomplete/README.rst   | 4 ++--
+ .../gsutil_4.28/gsutil/third_party/boto/bin/launch_instance | 2 +-
+ .../third_party/boto/boto/pyami/installers/ubuntu/ebs.py    | 6 +++---
+ .../gsutil/third_party/retry-decorator/README.rst           | 2 +-
+ .../test/cpp/naming/resolver_component_tests_defs.include   | 2 +-
+ third_party/llvm/lldb/docs/use/python-reference.rst         | 4 ++--
+ third_party/nasm/test/gas2nasm.py                           | 2 +-
+ .../tensorflow/tools/ci_build/windows/bazel/common_env.sh   | 2 +-
+ .../wpt_tools/wpt/tools/third_party/websockets/README.rst   | 4 ++--
+ 26 files changed, 35 insertions(+), 35 deletions(-)
+
+diff --git a/docs/python3_migration.md b/docs/python3_migration.md
+index 65aea89812..044b8901b2 100644
+--- a/docs/python3_migration.md
++++ b/docs/python3_migration.md
+@@ -58,7 +58,7 @@ However, here are a few notes that may be helpful in a Chromium context:
+   is available in vpython and in `//third_party/six/src/six.py`.
+ 
+ * shebang lines mostly don't matter. A "shebang line" is the line at the
+-  beginning of many unix scripts, like `#!/usr/bin/env python`. They are
++  beginning of many unix scripts, like `#!/usr/bin/env python3`. They are
+   not that important for us because most of our python invocations come
+   from tools like Ninja or Swarming and invoke python directly. So, while
+   you should keep them accurate where they are useful, we can't rely
+diff --git a/third_party/android_deps/buildSrc/src/main/groovy/3ppFetch.template b/third_party/android_deps/buildSrc/src/main/groovy/3ppFetch.template
+index 3f26813045..67e12d8140 100644
+--- a/third_party/android_deps/buildSrc/src/main/groovy/3ppFetch.template
++++ b/third_party/android_deps/buildSrc/src/main/groovy/3ppFetch.template
+@@ -1,4 +1,4 @@
+-${"#!/usr/bin/env python"}
++${"#!/usr/bin/env python3"}
+ ${copyrightHeader}
+ # This is generated, do not edit. Update BuildConfigGenerator.groovy and
+ # 3ppFetch.template instead.
+diff --git a/third_party/catapult/common/py_vulcanize/third_party/rcssmin/docs/apidoc/rcssmin-pysrc.html b/third_party/catapult/common/py_vulcanize/third_party/rcssmin/docs/apidoc/rcssmin-pysrc.html
+index 6856baca0e..9c423b3284 100644
+--- a/third_party/catapult/common/py_vulcanize/third_party/rcssmin/docs/apidoc/rcssmin-pysrc.html
++++ b/third_party/catapult/common/py_vulcanize/third_party/rcssmin/docs/apidoc/rcssmin-pysrc.html
+@@ -54,7 +54,7 @@
+ </table>
+ <h1 class="epydoc">Source Code for <a href="rcssmin-module.html">Module rcssmin</a></h1>
+ <pre class="py-src">
+-<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python</tt> </tt>
++<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python3</tt> </tt>
+ <a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: ascii -*-</tt> </tt>
+ <a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">r"""</tt> </tt>
+ <a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">==============</tt> </tt>
+diff --git a/third_party/catapult/common/py_vulcanize/third_party/rjsmin/docs/apidoc/rjsmin-pysrc.html b/third_party/catapult/common/py_vulcanize/third_party/rjsmin/docs/apidoc/rjsmin-pysrc.html
+index acf0aaab3f..a2f890bd83 100644
+--- a/third_party/catapult/common/py_vulcanize/third_party/rjsmin/docs/apidoc/rjsmin-pysrc.html
++++ b/third_party/catapult/common/py_vulcanize/third_party/rjsmin/docs/apidoc/rjsmin-pysrc.html
+@@ -54,7 +54,7 @@
+ </table>
+ <h1 class="epydoc">Source Code for <a href="rjsmin-module.html">Module rjsmin</a></h1>
+ <pre class="py-src">
+-<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python</tt> </tt>
++<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python3</tt> </tt>
+ <a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: ascii -*-</tt> </tt>
+ <a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">r"""</tt> </tt>
+ <a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">=====================</tt> </tt>
+diff --git a/third_party/catapult/third_party/google-endpoints/apitools/gen/command_registry.py b/third_party/catapult/third_party/google-endpoints/apitools/gen/command_registry.py
+index 80df9fff3c..8c763bb6c9 100644
+--- a/third_party/catapult/third_party/google-endpoints/apitools/gen/command_registry.py
++++ b/third_party/catapult/third_party/google-endpoints/apitools/gen/command_registry.py
+@@ -465,7 +465,7 @@ class CommandRegistry(object):
+ 
+     def WriteFile(self, printer):
+         """Write a simple CLI (currently just a stub)."""
+-        printer('#!/usr/bin/env python')
++        printer('#!/usr/bin/env python3')
+         printer('"""CLI for %s, version %s."""',
+                 self.__package, self.__version)
+         printer('# NOTE: This file is autogenerated and should not be edited '
+diff --git a/third_party/catapult/third_party/google-endpoints/apitools/gen/gen_client_lib.py b/third_party/catapult/third_party/google-endpoints/apitools/gen/gen_client_lib.py
+index fa8e0a9a3d..96144be8cb 100644
+--- a/third_party/catapult/third_party/google-endpoints/apitools/gen/gen_client_lib.py
++++ b/third_party/catapult/third_party/google-endpoints/apitools/gen/gen_client_lib.py
+@@ -207,7 +207,7 @@ class DescriptorGenerator(object):
+     def WriteIntermediateInit(self, out):
+         """Write a simple __init__.py for an intermediate directory."""
+         printer = self._GetPrinter(out)
+-        printer('#!/usr/bin/env python')
++        printer('#!/usr/bin/env python3')
+         printer('"""Shared __init__.py for apitools."""')
+         printer()
+         printer('from pkgutil import extend_path')
+diff --git a/third_party/catapult/third_party/google-endpoints/libfuturize/fixer_util.py b/third_party/catapult/third_party/google-endpoints/libfuturize/fixer_util.py
+index ce1e9753b6..dcf4adebfc 100644
+--- a/third_party/catapult/third_party/google-endpoints/libfuturize/fixer_util.py
++++ b/third_party/catapult/third_party/google-endpoints/libfuturize/fixer_util.py
+@@ -477,7 +477,7 @@ def is_shebang_comment(node):
+     Comments are prefixes for Leaf nodes. Returns whether the given node has a
+     prefix that looks like a shebang line or an encoding line:
+ 
+-        #!/usr/bin/env python
++        #!/usr/bin/env python3
+         #!/usr/bin/python3
+     """
+     return bool(re.match(SHEBANG_REGEX, node.prefix))
+diff --git a/third_party/catapult/third_party/gsutil/gslib/tests/testcase/integration_testcase.py b/third_party/catapult/third_party/gsutil/gslib/tests/testcase/integration_testcase.py
+index e9cc502a73..0b0910cfc6 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/tests/testcase/integration_testcase.py
++++ b/third_party/catapult/third_party/gsutil/gslib/tests/testcase/integration_testcase.py
+@@ -1049,7 +1049,7 @@ class GsUtilIntegrationTestCase(base.GsUtilTestCase):
+       # Prepend the interpreter path; ensures we use the same interpreter that
+       # was used to invoke the integration tests. In practice, this only differs
+       # when you're running the tests using a different interpreter than
+-      # whatever `/usr/bin/env python` resolves to.
++      # whatever `/usr/bin/env python3` resolves to.
+       cmd = [str(sys.executable)] + cmd
+     cmd_str = ' '.join(cmd)
+ 
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/bin/launch_instance b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/bin/launch_instance
+index 0815444429..b48ca779b8 100755
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/bin/launch_instance
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/bin/launch_instance
+@@ -25,7 +25,7 @@
+ VERSION="0.2"
+ 
+ 
+-CLOUD_INIT_SCRIPT = """#!/usr/bin/env python
++CLOUD_INIT_SCRIPT = """#!/usr/bin/env python3
+ f = open("/etc/boto.cfg", "w")
+ f.write(\"\"\"%s\"\"\")
+ f.close()
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/boto/pyami/installers/ubuntu/ebs.py b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/boto/pyami/installers/ubuntu/ebs.py
+index a0a507045e..1849ccd14f 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/boto/pyami/installers/ubuntu/ebs.py
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/boto/pyami/installers/ubuntu/ebs.py
+@@ -50,7 +50,7 @@ import os, time
+ from boto.pyami.installers.ubuntu.installer import Installer
+ from string import Template
+ 
+-BackupScriptTemplate = """#!/usr/bin/env python
++BackupScriptTemplate = """#!/usr/bin/env python3
+ # Backup EBS volume
+ import boto
+ from boto.pyami.scriptbase import ScriptBase
+@@ -77,7 +77,7 @@ if __name__ == "__main__":
+     b.main()
+ """
+ 
+-BackupCleanupScript= """#!/usr/bin/env python
++BackupCleanupScript= """#!/usr/bin/env python3
+ import boto
+ from boto.manage.volume import Volume
+ 
+@@ -87,7 +87,7 @@ for v in Volume.all():
+     v.trim_snapshots(True)
+ """
+ 
+-TagBasedBackupCleanupScript= """#!/usr/bin/env python
++TagBasedBackupCleanupScript= """#!/usr/bin/env python3
+ import boto
+ 
+ # Cleans Backups of EBS volumes
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/docs/source/dynamodb2_tut.rst b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/docs/source/dynamodb2_tut.rst
+index f367cf974e..7af602981a 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/docs/source/dynamodb2_tut.rst
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/docs/source/dynamodb2_tut.rst
+@@ -553,7 +553,7 @@ you'd like to scan.
+ An example of using parallel scan to send out email to all users might look
+ something like::
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+     import threading
+ 
+     import boto.ses
+@@ -674,7 +674,7 @@ DynamoDB Local
+ `Amazon DynamoDB Local`_ is a utility which can be used to mock DynamoDB
+ during development. Connecting to a running DynamoDB Local server is easy::
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+     from boto.dynamodb2.layer1 import DynamoDBConnection
+ 
+ 
+diff --git a/third_party/catapult/third_party/gsutil/third_party/apitools/apitools/gen/gen_client_lib.py b/third_party/catapult/third_party/gsutil/third_party/apitools/apitools/gen/gen_client_lib.py
+index 9c852c6986..ec731703aa 100644
+--- a/third_party/catapult/third_party/gsutil/third_party/apitools/apitools/gen/gen_client_lib.py
++++ b/third_party/catapult/third_party/gsutil/third_party/apitools/apitools/gen/gen_client_lib.py
+@@ -186,7 +186,7 @@ class DescriptorGenerator(object):
+     def WriteIntermediateInit(self, out):
+         """Write a simple __init__.py for an intermediate directory."""
+         printer = self._GetPrinter(out)
+-        printer('#!/usr/bin/env python')
++        printer('#!/usr/bin/env python3')
+         printer('"""Shared __init__.py for apitools."""')
+         printer()
+         printer('from pkgutil import extend_path')
+diff --git a/third_party/catapult/third_party/gsutil/third_party/argcomplete/README.rst b/third_party/catapult/third_party/gsutil/third_party/argcomplete/README.rst
+index 03f0461754..1368b96de0 100644
+--- a/third_party/catapult/third_party/gsutil/third_party/argcomplete/README.rst
++++ b/third_party/catapult/third_party/gsutil/third_party/argcomplete/README.rst
+@@ -30,7 +30,7 @@ Python code (e.g. ``my-awesome-script``):
+ 
+ .. code-block:: python
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+     # PYTHON_ARGCOMPLETE_OK
+     import argcomplete, argparse
+     parser = argparse.ArgumentParser()
+@@ -132,7 +132,7 @@ organization and complete their names, then prints the member description:
+ 
+ .. code-block:: python
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+     # PYTHON_ARGCOMPLETE_OK
+     import argcomplete, argparse, requests, pprint
+ 
+diff --git a/third_party/catapult/third_party/gsutil/third_party/retry-decorator/README.rst b/third_party/catapult/third_party/gsutil/third_party/retry-decorator/README.rst
+index 4f8b9beb75..440d9ff6b4 100644
+--- a/third_party/catapult/third_party/gsutil/third_party/retry-decorator/README.rst
++++ b/third_party/catapult/third_party/gsutil/third_party/retry-decorator/README.rst
+@@ -6,7 +6,7 @@ Retry decorator
+ 
+ ::
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+ 
+     from __future__ import print_function
+     from retry_decorator import *
+diff --git a/third_party/catapult/third_party/pyserial/serial/__init__.py b/third_party/catapult/third_party/pyserial/serial/__init__.py
+index 33ae52ec11..02079b177b 100755
+--- a/third_party/catapult/third_party/pyserial/serial/__init__.py
++++ b/third_party/catapult/third_party/pyserial/serial/__init__.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python 
++#!/usr/bin/env python3
+ 
+ # portable serial port access with python
+ # this is a wrapper module for different platform implementations
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/apitools/apitools/gen/command_registry.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/apitools/apitools/gen/command_registry.py
+index 4eee5c6331..c928ce312d 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/apitools/apitools/gen/command_registry.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/apitools/apitools/gen/command_registry.py
+@@ -470,7 +470,7 @@ class CommandRegistry(object):
+ 
+     def WriteFile(self, printer):
+         """Write a simple CLI (currently just a stub)."""
+-        printer('#!/usr/bin/env python')
++        printer('#!/usr/bin/env python3')
+         printer('"""CLI for %s, version %s."""',
+                 self.__package, self.__version)
+         printer('# NOTE: This file is autogenerated and should not be edited '
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/apitools/apitools/gen/gen_client_lib.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/apitools/apitools/gen/gen_client_lib.py
+index d0e795eb5c..fd29c18c4f 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/apitools/apitools/gen/gen_client_lib.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/apitools/apitools/gen/gen_client_lib.py
+@@ -202,7 +202,7 @@ class DescriptorGenerator(object):
+     def WriteIntermediateInit(self, out):
+         """Write a simple __init__.py for an intermediate directory."""
+         printer = self._GetPrinter(out)
+-        printer('#!/usr/bin/env python')
++        printer('#!/usr/bin/env python3')
+         printer('"""Shared __init__.py for apitools."""')
+         printer()
+         printer('from pkgutil import extend_path')
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/argcomplete/README.rst b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/argcomplete/README.rst
+index 4bffb86966..51cde4059e 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/argcomplete/README.rst
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/argcomplete/README.rst
+@@ -30,7 +30,7 @@ Python code (e.g. ``my-awesome-script.py``):
+ 
+ .. code-block:: python
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+     # PYTHON_ARGCOMPLETE_OK
+     import argcomplete, argparse
+     parser = argparse.ArgumentParser()
+@@ -136,7 +136,7 @@ organization and complete their names, then prints the member description:
+ 
+ .. code-block:: python
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+     # PYTHON_ARGCOMPLETE_OK
+     import argcomplete, argparse, requests, pprint
+ 
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/bin/launch_instance b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/bin/launch_instance
+index 0815444429..b48ca779b8 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/bin/launch_instance
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/bin/launch_instance
+@@ -25,7 +25,7 @@
+ VERSION="0.2"
+ 
+ 
+-CLOUD_INIT_SCRIPT = """#!/usr/bin/env python
++CLOUD_INIT_SCRIPT = """#!/usr/bin/env python3
+ f = open("/etc/boto.cfg", "w")
+ f.write(\"\"\"%s\"\"\")
+ f.close()
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/boto/pyami/installers/ubuntu/ebs.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/boto/pyami/installers/ubuntu/ebs.py
+index a0a507045e..1849ccd14f 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/boto/pyami/installers/ubuntu/ebs.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/boto/pyami/installers/ubuntu/ebs.py
+@@ -50,7 +50,7 @@ import os, time
+ from boto.pyami.installers.ubuntu.installer import Installer
+ from string import Template
+ 
+-BackupScriptTemplate = """#!/usr/bin/env python
++BackupScriptTemplate = """#!/usr/bin/env python3
+ # Backup EBS volume
+ import boto
+ from boto.pyami.scriptbase import ScriptBase
+@@ -77,7 +77,7 @@ if __name__ == "__main__":
+     b.main()
+ """
+ 
+-BackupCleanupScript= """#!/usr/bin/env python
++BackupCleanupScript= """#!/usr/bin/env python3
+ import boto
+ from boto.manage.volume import Volume
+ 
+@@ -87,7 +87,7 @@ for v in Volume.all():
+     v.trim_snapshots(True)
+ """
+ 
+-TagBasedBackupCleanupScript= """#!/usr/bin/env python
++TagBasedBackupCleanupScript= """#!/usr/bin/env python3
+ import boto
+ 
+ # Cleans Backups of EBS volumes
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/retry-decorator/README.rst b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/retry-decorator/README.rst
+index 4f8b9beb75..440d9ff6b4 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/retry-decorator/README.rst
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/retry-decorator/README.rst
+@@ -6,7 +6,7 @@ Retry decorator
+ 
+ ::
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+ 
+     from __future__ import print_function
+     from retry_decorator import *
+diff --git a/third_party/grpc/src/templates/test/cpp/naming/resolver_component_tests_defs.include b/third_party/grpc/src/templates/test/cpp/naming/resolver_component_tests_defs.include
+index 433036993f..c4ae3a3d45 100644
+--- a/third_party/grpc/src/templates/test/cpp/naming/resolver_component_tests_defs.include
++++ b/third_party/grpc/src/templates/test/cpp/naming/resolver_component_tests_defs.include
+@@ -1,4 +1,4 @@
+-<%def name="resolver_component_tests(tests)">#!/usr/bin/env python
++<%def name="resolver_component_tests(tests)">#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/llvm/lldb/docs/use/python-reference.rst b/third_party/llvm/lldb/docs/use/python-reference.rst
+index 75d9ea1164..9fa5870b3f 100644
+--- a/third_party/llvm/lldb/docs/use/python-reference.rst
++++ b/third_party/llvm/lldb/docs/use/python-reference.rst
+@@ -610,7 +610,7 @@ a function that can be used by LLDB's python command code:
+ 
+ ::
+ 
+-  #!/usr/bin/env python
++  #!/usr/bin/env python3
+ 
+   import lldb
+   import commands
+@@ -718,7 +718,7 @@ print the process, thread and frame objects if the process stopped:
+ 
+ ::
+ 
+-  #!/usr/bin/env python
++  #!/usr/bin/env python3
+ 
+   import lldb
+   import os
+diff --git a/third_party/nasm/test/gas2nasm.py b/third_party/nasm/test/gas2nasm.py
+index cc45be5f57..67c4ca8fdc 100755
+--- a/third_party/nasm/test/gas2nasm.py
++++ b/third_party/nasm/test/gas2nasm.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python -tt
++#!/usr/bin/env python3 -tt
+ # -*- python -*-
+ # Convert gas testsuite file to NASM test asm file
+ # usage >
+diff --git a/third_party/tflite/src/tensorflow/tools/ci_build/windows/bazel/common_env.sh b/third_party/tflite/src/tensorflow/tools/ci_build/windows/bazel/common_env.sh
+index 23016f7f3e..fbb6488f61 100644
+--- a/third_party/tflite/src/tensorflow/tools/ci_build/windows/bazel/common_env.sh
++++ b/third_party/tflite/src/tensorflow/tools/ci_build/windows/bazel/common_env.sh
+@@ -46,7 +46,7 @@ export PYTHON_BIN_PATH="C:/${PYTHON_BASE_PATH}/python.exe"
+ export PYTHON_LIB_PATH="C:/${PYTHON_BASE_PATH}/lib/site-packages"
+ 
+ # Add python into PATH, it's needed because gen_git_source.py uses
+-# '/usr/bin/env python' as a shebang
++# '/usr/bin/env python3' as a shebang
+ export PATH="/c/${PYTHON_BASE_PATH}:$PATH"
+ # Add git into PATH needed for gen_git_source.py
+ export PATH="/c/Program Files/Git/cmd:$PATH"
+diff --git a/third_party/wpt_tools/wpt/tools/third_party/websockets/README.rst b/third_party/wpt_tools/wpt/tools/third_party/websockets/README.rst
+index 1e15ba1981..51bf0f6fa5 100644
+--- a/third_party/wpt_tools/wpt/tools/third_party/websockets/README.rst
++++ b/third_party/wpt_tools/wpt/tools/third_party/websockets/README.rst
+@@ -45,7 +45,7 @@ Here's how a client sends and receives messages:
+ 
+ .. code:: python
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+ 
+     import asyncio
+     import websockets
+@@ -62,7 +62,7 @@ And here's an echo server:
+ 
+ .. code:: python
+ 
+-    #!/usr/bin/env python
++    #!/usr/bin/env python3
+ 
+     import asyncio
+     import websockets

@@ -1,0 +1,471 @@
+From 99ac08266a7d625b7513fb4d0140a1799cdc84b3 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:48 +0200
+Subject: [PATCH] python3: update shebangs '^#!/usr/bin/python2.4$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ native_client/site_scons/site_tools/code_coverage.py            | 2 +-
+ native_client/site_scons/site_tools/command_output.py           | 2 +-
+ native_client/site_scons/site_tools/component_bits.py           | 2 +-
+ native_client/site_scons/site_tools/component_builders.py       | 2 +-
+ native_client/site_scons/site_tools/component_targets.py        | 2 +-
+ native_client/site_scons/site_tools/defer.py                    | 2 +-
+ native_client/site_scons/site_tools/environment_tools.py        | 2 +-
+ native_client/site_scons/site_tools/publish.py                  | 2 +-
+ native_client/site_scons/site_tools/replicate.py                | 2 +-
+ native_client/site_scons/site_tools/target_debug.py             | 2 +-
+ native_client/site_scons/site_tools/target_optimized.py         | 2 +-
+ native_client/site_scons/site_tools/target_platform_linux.py    | 2 +-
+ native_client/site_scons/site_tools/target_platform_mac.py      | 2 +-
+ native_client/site_scons/site_tools/target_platform_windows.py  | 2 +-
+ native_client/site_scons/site_tools/windows_hard_link.py        | 2 +-
+ native_client/site_scons/usage_log.py                           | 2 +-
+ native_client/tools/test_timing.py                              | 2 +-
+ .../gae_ts_mon/gae_ts_mon/third_party/googleapiclient/errors.py | 2 +-
+ .../gae_ts_mon/gae_ts_mon/third_party/googleapiclient/model.py  | 2 +-
+ .../google-endpoints/endpoints/test/apiserving_test.py          | 2 +-
+ third_party/catapult/third_party/graphy/graphy/all_tests.py     | 2 +-
+ .../graphy/graphy/backends/google_chart_api/__init__.py         | 2 +-
+ .../graphy/graphy/backends/google_chart_api/bar_chart_test.py   | 2 +-
+ .../graphy/backends/google_chart_api/base_encoder_test.py       | 2 +-
+ .../graphy/graphy/backends/google_chart_api/encoders.py         | 2 +-
+ .../graphy/graphy/backends/google_chart_api/line_chart_test.py  | 2 +-
+ .../graphy/graphy/backends/google_chart_api/pie_chart_test.py   | 2 +-
+ .../third_party/graphy/graphy/backends/google_chart_api/util.py | 2 +-
+ .../graphy/graphy/backends/google_chart_api/util_test.py        | 2 +-
+ third_party/catapult/third_party/graphy/graphy/bar_chart.py     | 2 +-
+ .../catapult/third_party/graphy/graphy/bar_chart_test.py        | 2 +-
+ third_party/catapult/third_party/graphy/graphy/common.py        | 2 +-
+ third_party/catapult/third_party/graphy/graphy/common_test.py   | 2 +-
+ third_party/catapult/third_party/graphy/graphy/formatters.py    | 2 +-
+ .../catapult/third_party/graphy/graphy/formatters_test.py       | 2 +-
+ third_party/catapult/third_party/graphy/graphy/graphy_test.py   | 2 +-
+ third_party/catapult/third_party/graphy/graphy/line_chart.py    | 2 +-
+ .../catapult/third_party/graphy/graphy/line_chart_test.py       | 2 +-
+ third_party/catapult/third_party/graphy/graphy/pie_chart.py     | 2 +-
+ .../catapult/third_party/graphy/graphy/pie_chart_test.py        | 2 +-
+ third_party/protobuf/python/mox.py                              | 2 +-
+ third_party/protobuf/python/stubout.py                          | 2 +-
+ 42 files changed, 42 insertions(+), 42 deletions(-)
+
+diff --git a/native_client/site_scons/site_tools/code_coverage.py b/native_client/site_scons/site_tools/code_coverage.py
+index ba2520421b..589a0f5e25 100755
+--- a/native_client/site_scons/site_tools/code_coverage.py
++++ b/native_client/site_scons/site_tools/code_coverage.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/command_output.py b/native_client/site_scons/site_tools/command_output.py
+index 97c871ae7a..609b5ee180 100755
+--- a/native_client/site_scons/site_tools/command_output.py
++++ b/native_client/site_scons/site_tools/command_output.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/component_bits.py b/native_client/site_scons/site_tools/component_bits.py
+index 4ec76aca99..2d10176e61 100755
+--- a/native_client/site_scons/site_tools/component_bits.py
++++ b/native_client/site_scons/site_tools/component_bits.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/component_builders.py b/native_client/site_scons/site_tools/component_builders.py
+index 9e168bf5d1..f4c7d8f589 100755
+--- a/native_client/site_scons/site_tools/component_builders.py
++++ b/native_client/site_scons/site_tools/component_builders.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright (c) 2011 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/component_targets.py b/native_client/site_scons/site_tools/component_targets.py
+index 34a5f31744..54e16a78c3 100755
+--- a/native_client/site_scons/site_tools/component_targets.py
++++ b/native_client/site_scons/site_tools/component_targets.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/defer.py b/native_client/site_scons/site_tools/defer.py
+index 1e7745aab0..4bf5f33787 100755
+--- a/native_client/site_scons/site_tools/defer.py
++++ b/native_client/site_scons/site_tools/defer.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/environment_tools.py b/native_client/site_scons/site_tools/environment_tools.py
+index f41d69b760..db31e3c833 100755
+--- a/native_client/site_scons/site_tools/environment_tools.py
++++ b/native_client/site_scons/site_tools/environment_tools.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/publish.py b/native_client/site_scons/site_tools/publish.py
+index aa10c57fbd..517302f958 100755
+--- a/native_client/site_scons/site_tools/publish.py
++++ b/native_client/site_scons/site_tools/publish.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/replicate.py b/native_client/site_scons/site_tools/replicate.py
+index a5a8c29ca7..331a4dd836 100755
+--- a/native_client/site_scons/site_tools/replicate.py
++++ b/native_client/site_scons/site_tools/replicate.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/target_debug.py b/native_client/site_scons/site_tools/target_debug.py
+index 7d652dea65..2e960e37ab 100755
+--- a/native_client/site_scons/site_tools/target_debug.py
++++ b/native_client/site_scons/site_tools/target_debug.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/target_optimized.py b/native_client/site_scons/site_tools/target_optimized.py
+index 8d057402cc..b8a1c18038 100755
+--- a/native_client/site_scons/site_tools/target_optimized.py
++++ b/native_client/site_scons/site_tools/target_optimized.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/target_platform_linux.py b/native_client/site_scons/site_tools/target_platform_linux.py
+index 4ff403f961..7fc1eb4ac9 100755
+--- a/native_client/site_scons/site_tools/target_platform_linux.py
++++ b/native_client/site_scons/site_tools/target_platform_linux.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/target_platform_mac.py b/native_client/site_scons/site_tools/target_platform_mac.py
+index 8fd4734144..8a3ca8451d 100755
+--- a/native_client/site_scons/site_tools/target_platform_mac.py
++++ b/native_client/site_scons/site_tools/target_platform_mac.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/target_platform_windows.py b/native_client/site_scons/site_tools/target_platform_windows.py
+index 6d1954f2a5..06faff82ba 100755
+--- a/native_client/site_scons/site_tools/target_platform_windows.py
++++ b/native_client/site_scons/site_tools/target_platform_windows.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/site_tools/windows_hard_link.py b/native_client/site_scons/site_tools/windows_hard_link.py
+index 540c97ef56..fee7f1dbf3 100755
+--- a/native_client/site_scons/site_tools/windows_hard_link.py
++++ b/native_client/site_scons/site_tools/windows_hard_link.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/site_scons/usage_log.py b/native_client/site_scons/usage_log.py
+index e043ca9fc2..cab09ea578 100755
+--- a/native_client/site_scons/usage_log.py
++++ b/native_client/site_scons/usage_log.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2009 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/tools/test_timing.py b/native_client/tools/test_timing.py
+index 56df62075f..3681ecfd7a 100755
+--- a/native_client/tools/test_timing.py
++++ b/native_client/tools/test_timing.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ # Copyright 2008 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/third_party/googleapiclient/errors.py b/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/third_party/googleapiclient/errors.py
+index f832d6275d..86316056fd 100644
+--- a/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/third_party/googleapiclient/errors.py
++++ b/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/third_party/googleapiclient/errors.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2014 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/third_party/googleapiclient/model.py b/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/third_party/googleapiclient/model.py
+index 0f0172cab5..99362fff13 100644
+--- a/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/third_party/googleapiclient/model.py
++++ b/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/third_party/googleapiclient/model.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2014 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/third_party/google-endpoints/endpoints/test/apiserving_test.py b/third_party/catapult/third_party/google-endpoints/endpoints/test/apiserving_test.py
+index 8028647bd0..2652acdfc6 100644
+--- a/third_party/catapult/third_party/google-endpoints/endpoints/test/apiserving_test.py
++++ b/third_party/catapult/third_party/google-endpoints/endpoints/test/apiserving_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/all_tests.py b/third_party/catapult/third_party/graphy/graphy/all_tests.py
+index 834e22c50b..0650f21976 100644
+--- a/third_party/catapult/third_party/graphy/graphy/all_tests.py
++++ b/third_party/catapult/third_party/graphy/graphy/all_tests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/__init__.py b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/__init__.py
+index fa4aa7ac2f..810959773b 100644
+--- a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/__init__.py
++++ b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/__init__.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/bar_chart_test.py b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/bar_chart_test.py
+index bb4ed33985..c8478fae68 100644
+--- a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/bar_chart_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/bar_chart_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/base_encoder_test.py b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/base_encoder_test.py
+index 335b588b4c..699d156c95 100644
+--- a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/base_encoder_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/base_encoder_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/encoders.py b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/encoders.py
+index 913d579965..94b309cb62 100644
+--- a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/encoders.py
++++ b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/encoders.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/line_chart_test.py b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/line_chart_test.py
+index f840babb80..af19b2b287 100644
+--- a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/line_chart_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/line_chart_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/pie_chart_test.py b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/pie_chart_test.py
+index 67e65dc11f..7ee4b35ecc 100644
+--- a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/pie_chart_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/pie_chart_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/util.py b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/util.py
+index 3a56ba216d..cc8a42bd96 100644
+--- a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/util.py
++++ b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/util.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/util_test.py b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/util_test.py
+index 0a31cb8c9a..783752117f 100644
+--- a/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/util_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/backends/google_chart_api/util_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/bar_chart.py b/third_party/catapult/third_party/graphy/graphy/bar_chart.py
+index c046fca6a6..03d55efb81 100644
+--- a/third_party/catapult/third_party/graphy/graphy/bar_chart.py
++++ b/third_party/catapult/third_party/graphy/graphy/bar_chart.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/bar_chart_test.py b/third_party/catapult/third_party/graphy/graphy/bar_chart_test.py
+index 701396d770..2f57a36e23 100644
+--- a/third_party/catapult/third_party/graphy/graphy/bar_chart_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/bar_chart_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/common.py b/third_party/catapult/third_party/graphy/graphy/common.py
+index 88ea36b022..02c9094f0a 100644
+--- a/third_party/catapult/third_party/graphy/graphy/common.py
++++ b/third_party/catapult/third_party/graphy/graphy/common.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/common_test.py b/third_party/catapult/third_party/graphy/graphy/common_test.py
+index ef53ba7f98..a70d63c295 100644
+--- a/third_party/catapult/third_party/graphy/graphy/common_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/common_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/formatters.py b/third_party/catapult/third_party/graphy/graphy/formatters.py
+index b2991b1794..683353fb25 100644
+--- a/third_party/catapult/third_party/graphy/graphy/formatters.py
++++ b/third_party/catapult/third_party/graphy/graphy/formatters.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/formatters_test.py b/third_party/catapult/third_party/graphy/graphy/formatters_test.py
+index 79efc20219..bdb5bc7a3c 100644
+--- a/third_party/catapult/third_party/graphy/graphy/formatters_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/formatters_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/graphy_test.py b/third_party/catapult/third_party/graphy/graphy/graphy_test.py
+index 24119a4120..7f1963063d 100644
+--- a/third_party/catapult/third_party/graphy/graphy/graphy_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/graphy_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/line_chart.py b/third_party/catapult/third_party/graphy/graphy/line_chart.py
+index d9a0bf73cc..b17ba8d1c9 100644
+--- a/third_party/catapult/third_party/graphy/graphy/line_chart.py
++++ b/third_party/catapult/third_party/graphy/graphy/line_chart.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/line_chart_test.py b/third_party/catapult/third_party/graphy/graphy/line_chart_test.py
+index 1ddeefd5af..b48f8d3635 100644
+--- a/third_party/catapult/third_party/graphy/graphy/line_chart_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/line_chart_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/pie_chart.py b/third_party/catapult/third_party/graphy/graphy/pie_chart.py
+index a7fd5f23fd..8ec1b0ba3a 100644
+--- a/third_party/catapult/third_party/graphy/graphy/pie_chart.py
++++ b/third_party/catapult/third_party/graphy/graphy/pie_chart.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/catapult/third_party/graphy/graphy/pie_chart_test.py b/third_party/catapult/third_party/graphy/graphy/pie_chart_test.py
+index 5b49ebc547..cc56df94a6 100644
+--- a/third_party/catapult/third_party/graphy/graphy/pie_chart_test.py
++++ b/third_party/catapult/third_party/graphy/graphy/pie_chart_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/protobuf/python/mox.py b/third_party/protobuf/python/mox.py
+index 9dd8ac7eb4..019662046d 100755
+--- a/third_party/protobuf/python/mox.py
++++ b/third_party/protobuf/python/mox.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #
+diff --git a/third_party/protobuf/python/stubout.py b/third_party/protobuf/python/stubout.py
+index ba391045b6..b563fa9930 100755
+--- a/third_party/protobuf/python/stubout.py
++++ b/third_party/protobuf/python/stubout.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/env python3
+ #
+ # Copyright 2008 Google Inc.
+ #

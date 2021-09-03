@@ -1,0 +1,163 @@
+From e2ef5b8f2bf42764a386121e0372f4bcd9a01785 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:46 +0200
+Subject: [PATCH] python3: update shebangs '^#!/usr/bin/env python2$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ build/fuchsia/binary_sizes.py                                   | 2 +-
+ buildtools/linux64/clang-format                                 | 2 +-
+ components/assist_ranker/print_example_preprocessor_config.py   | 2 +-
+ .../httplib2/python2/httplib2/test/test_ssl_context.py          | 2 +-
+ .../httplib2/python2/httplib2/test/test_ssl_context.py          | 2 +-
+ third_party/ffmpeg/tools/normalize.py                           | 2 +-
+ third_party/ffmpeg/tools/zmqshell.py                            | 2 +-
+ third_party/openscreen/src/build/scripts/install-sysroot.py     | 2 +-
+ third_party/openscreen/src/testing/libfuzzer/archive_corpus.py  | 2 +-
+ third_party/skia/bin/gerrit-number                              | 2 +-
+ third_party/webgl/src/sdk/tests/deqp/build.py                   | 2 +-
+ third_party/webgl/src/sdk/tests/py/tex_image_test_generator.py  | 2 +-
+ tools/security/idn_test_case_generator.py                       | 2 +-
+ v8/tools/dev/gm.py                                              | 2 +-
+ 14 files changed, 14 insertions(+), 14 deletions(-)
+
+diff --git a/build/fuchsia/binary_sizes.py b/build/fuchsia/binary_sizes.py
+index 52d05999d0..6b1dcc10ab 100755
+--- a/build/fuchsia/binary_sizes.py
++++ b/build/fuchsia/binary_sizes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/buildtools/linux64/clang-format b/buildtools/linux64/clang-format
+index 1a25a2b520..7fb2b80b99 100755
+--- a/buildtools/linux64/clang-format
++++ b/buildtools/linux64/clang-format
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/components/assist_ranker/print_example_preprocessor_config.py b/components/assist_ranker/print_example_preprocessor_config.py
+index 5e35a0f1a6..ea54c4a6c7 100755
+--- a/components/assist_ranker/print_example_preprocessor_config.py
++++ b/components/assist_ranker/print_example_preprocessor_config.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ 
+ # Copyright 2018 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/catapult/third_party/gsutil/third_party/httplib2/python2/httplib2/test/test_ssl_context.py b/third_party/catapult/third_party/gsutil/third_party/httplib2/python2/httplib2/test/test_ssl_context.py
+index 5cf9efb0d9..d7ac03f564 100644
+--- a/third_party/catapult/third_party/gsutil/third_party/httplib2/python2/httplib2/test/test_ssl_context.py
++++ b/third_party/catapult/third_party/gsutil/third_party/httplib2/python2/httplib2/test/test_ssl_context.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ from __future__ import print_function
+ import BaseHTTPServer
+ import logging
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/httplib2/python2/httplib2/test/test_ssl_context.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/httplib2/python2/httplib2/test/test_ssl_context.py
+index c3173b0707..8c317ca177 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/httplib2/python2/httplib2/test/test_ssl_context.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/httplib2/python2/httplib2/test/test_ssl_context.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ import BaseHTTPServer
+ import logging
+ import os.path
+diff --git a/third_party/ffmpeg/tools/normalize.py b/third_party/ffmpeg/tools/normalize.py
+index 7d87c5e154..c77e7f865d 100755
+--- a/third_party/ffmpeg/tools/normalize.py
++++ b/third_party/ffmpeg/tools/normalize.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ 
+ import sys, subprocess
+ 
+diff --git a/third_party/ffmpeg/tools/zmqshell.py b/third_party/ffmpeg/tools/zmqshell.py
+index a7d1126006..134c53c11c 100755
+--- a/third_party/ffmpeg/tools/zmqshell.py
++++ b/third_party/ffmpeg/tools/zmqshell.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ 
+ import sys, zmq, cmd
+ 
+diff --git a/third_party/openscreen/src/build/scripts/install-sysroot.py b/third_party/openscreen/src/build/scripts/install-sysroot.py
+index 374598f172..7ee2627f35 100755
+--- a/third_party/openscreen/src/build/scripts/install-sysroot.py
++++ b/third_party/openscreen/src/build/scripts/install-sysroot.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ 
+ # Copyright 2019 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/openscreen/src/testing/libfuzzer/archive_corpus.py b/third_party/openscreen/src/testing/libfuzzer/archive_corpus.py
+index e80848ddfa..e1960854fb 100755
+--- a/third_party/openscreen/src/testing/libfuzzer/archive_corpus.py
++++ b/third_party/openscreen/src/testing/libfuzzer/archive_corpus.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/skia/bin/gerrit-number b/third_party/skia/bin/gerrit-number
+index d9707c07a7..db1952dc19 100755
+--- a/third_party/skia/bin/gerrit-number
++++ b/third_party/skia/bin/gerrit-number
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ # Copyright 2017 Google Inc.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/webgl/src/sdk/tests/deqp/build.py b/third_party/webgl/src/sdk/tests/deqp/build.py
+index 7f452c634a..c2e1765301 100644
+--- a/third_party/webgl/src/sdk/tests/deqp/build.py
++++ b/third_party/webgl/src/sdk/tests/deqp/build.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ 
+ # Copyright (c) 2019 The Khronos Group Inc.
+ # Use of this source code is governed by an MIT-style license that can be
+diff --git a/third_party/webgl/src/sdk/tests/py/tex_image_test_generator.py b/third_party/webgl/src/sdk/tests/py/tex_image_test_generator.py
+index 37b4022738..96b7519581 100755
+--- a/third_party/webgl/src/sdk/tests/py/tex_image_test_generator.py
++++ b/third_party/webgl/src/sdk/tests/py/tex_image_test_generator.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ 
+ # Copyright (c) 2019 The Khronos Group Inc.
+ # Use of this source code is governed by an MIT-style license that can be
+diff --git a/tools/security/idn_test_case_generator.py b/tools/security/idn_test_case_generator.py
+index 1d0eab65f6..92642b31d6 100755
+--- a/tools/security/idn_test_case_generator.py
++++ b/tools/security/idn_test_case_generator.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ # Copyright 2017 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/v8/tools/dev/gm.py b/v8/tools/dev/gm.py
+index 8a05da3cc9..7c7f4d5628 100755
+--- a/v8/tools/dev/gm.py
++++ b/v8/tools/dev/gm.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ # Copyright 2017 the V8 project authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.

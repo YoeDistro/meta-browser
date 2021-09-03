@@ -1,0 +1,163 @@
+From 7d3e361c86ff2a421fb69370e2763505b37c40f1 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:51 +0200
+Subject: [PATCH] python3: update shebangs '^#!/usr/bin env python$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ .../vendored/boto/tests/unit/cloudsearch/test_connection.py     | 2 +-
+ .../gslib/vendored/boto/tests/unit/cloudsearch/test_document.py | 2 +-
+ .../gslib/vendored/boto/tests/unit/cloudsearch/test_search.py   | 2 +-
+ .../vendored/boto/tests/unit/cloudsearch2/test_connection.py    | 2 +-
+ .../vendored/boto/tests/unit/cloudsearch2/test_document.py      | 2 +-
+ .../gslib/vendored/boto/tests/unit/cloudsearch2/test_search.py  | 2 +-
+ .../boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py | 2 +-
+ .../third_party/boto/tests/unit/cloudsearch/test_connection.py  | 2 +-
+ .../third_party/boto/tests/unit/cloudsearch/test_document.py    | 2 +-
+ .../third_party/boto/tests/unit/cloudsearch/test_search.py      | 2 +-
+ .../third_party/boto/tests/unit/cloudsearch2/test_connection.py | 2 +-
+ .../third_party/boto/tests/unit/cloudsearch2/test_document.py   | 2 +-
+ .../third_party/boto/tests/unit/cloudsearch2/test_search.py     | 2 +-
+ .../boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py | 2 +-
+ 14 files changed, 14 insertions(+), 14 deletions(-)
+
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_connection.py b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_connection.py
+index 64c2b572ff..e9f0ef44a4 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_connection.py
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_connection.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ 
+ from tests.unit import AWSMockServiceTestCase
+ 
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_document.py b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_document.py
+index 929b62be65..47da2b12c5 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_document.py
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_document.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ 
+ from tests.unit import unittest
+ from httpretty import HTTPretty
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_search.py b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_search.py
+index e8097640a0..b1da942e58 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_search.py
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch/test_search.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ 
+ from tests.compat import mock, unittest
+ from httpretty import HTTPretty
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_connection.py b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_connection.py
+index c182478e4f..3439cee853 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_connection.py
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_connection.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ 
+ from tests.unit import AWSMockServiceTestCase
+ 
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_document.py b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_document.py
+index dac4aa6431..dccb36f4cd 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_document.py
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_document.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ from boto.cloudsearch2.domain import Domain
+ from boto.cloudsearch2.layer1 import CloudSearchConnection
+ 
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_search.py b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_search.py
+index 8fa611d82c..f8b92f4b68 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_search.py
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearch2/test_search.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ from boto.cloudsearch2.domain import Domain
+ from boto.cloudsearch2.layer1 import CloudSearchConnection
+ 
+diff --git a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py
+index e0758a4710..7ed73c4e7d 100644
+--- a/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py
++++ b/third_party/catapult/third_party/gsutil/gslib/vendored/boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ import json
+ import mock
+ from tests.unit import AWSMockServiceTestCase
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_connection.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_connection.py
+index 64c2b572ff..e9f0ef44a4 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_connection.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_connection.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ 
+ from tests.unit import AWSMockServiceTestCase
+ 
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_document.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_document.py
+index 929b62be65..47da2b12c5 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_document.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_document.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ 
+ from tests.unit import unittest
+ from httpretty import HTTPretty
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_search.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_search.py
+index e8097640a0..b1da942e58 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_search.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch/test_search.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ 
+ from tests.compat import mock, unittest
+ from httpretty import HTTPretty
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_connection.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_connection.py
+index c182478e4f..3439cee853 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_connection.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_connection.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ 
+ from tests.unit import AWSMockServiceTestCase
+ 
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_document.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_document.py
+index dac4aa6431..dccb36f4cd 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_document.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_document.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ from boto.cloudsearch2.domain import Domain
+ from boto.cloudsearch2.layer1 import CloudSearchConnection
+ 
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_search.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_search.py
+index 8fa611d82c..f8b92f4b68 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_search.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearch2/test_search.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ from boto.cloudsearch2.domain import Domain
+ from boto.cloudsearch2.layer1 import CloudSearchConnection
+ 
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py
+index e0758a4710..7ed73c4e7d 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/boto/tests/unit/cloudsearchdomain/test_cloudsearchdomain.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin env python
++#!/usr/bin/env python3
+ import json
+ import mock
+ from tests.unit import AWSMockServiceTestCase

@@ -1,0 +1,361 @@
+From 0f1d40a8f4c8a2df5414225afbe440a151252d37 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:50 +0200
+Subject: [PATCH] python3: update shebangs '^#!/usr/bin/python2$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ build/fuchsia/qemu_target_test.py                               | 2 +-
+ testing/libfuzzer/archive_corpus.py                             | 2 +-
+ testing/libfuzzer/dictionary_generator.py                       | 2 +-
+ testing/libfuzzer/gen_fuzzer_config.py                          | 2 +-
+ testing/libfuzzer/tests/check_fuzzer_config.py                  | 2 +-
+ testing/libfuzzer/tests/check_seed_corpus_archive.py            | 2 +-
+ testing/libfuzzer/zip_sources.py                                | 2 +-
+ third_party/angle/scripts/bmp_to_nv12.py                        | 2 +-
+ third_party/angle/scripts/file_exists.py                        | 2 +-
+ third_party/angle/scripts/gen_vk_gl_cts_build.py                | 2 +-
+ third_party/angle/scripts/generate_new_renderer.py              | 2 +-
+ third_party/angle/scripts/msvs_projects.py                      | 2 +-
+ third_party/angle/scripts/perf_test_runner.py                   | 2 +-
+ third_party/angle/scripts/remove_files.py                       | 2 +-
+ third_party/angle/scripts/trigger.py                            | 2 +-
+ third_party/angle/scripts/update_canary_angle.py                | 2 +-
+ third_party/angle/src/common/gen_packed_gl_enums.py             | 2 +-
+ .../angle/src/libANGLE/renderer/d3d/d3d11/gen_blit11helper.py   | 2 +-
+ .../renderer/vulkan/gen_vk_mandatory_format_support_table.py    | 2 +-
+ third_party/angle/tools/angle_tools.py                          | 2 +-
+ .../angle/tools/flex-bison/update_flex_bison_binaries.py        | 2 +-
+ third_party/angle/tools/glslang/update_glslang_binary.py        | 2 +-
+ third_party/icu/scripts/make_data_assembly.py                   | 2 +-
+ .../openscreen/src/testing/libfuzzer/gen_fuzzer_config.py       | 2 +-
+ third_party/skia/tools/add_codereview_message.py                | 2 +-
+ third_party/skia/tools/compare_codereview.py                    | 2 +-
+ third_party/skia/tools/rewrite_includes.py                      | 2 +-
+ third_party/skia/tools/skottie-wasm-perf/parse_perf_csvs.py     | 2 +-
+ .../vulkan-validation-layers/src/build-gn/remove_files.py       | 2 +-
+ .../audio_coding/audio_network_adaptor/parse_ana_dump.py        | 2 +-
+ tools/android/wpr/chrome_proxy_wpr_record.py                    | 2 +-
+ tools/android/wpr/chrome_proxy_wpr_replay.py                    | 2 +-
+ 32 files changed, 32 insertions(+), 32 deletions(-)
+
+diff --git a/build/fuchsia/qemu_target_test.py b/build/fuchsia/qemu_target_test.py
+index 44b3802909..d399214cb8 100755
+--- a/build/fuchsia/qemu_target_test.py
++++ b/build/fuchsia/qemu_target_test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ # Copyright 2018 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/testing/libfuzzer/archive_corpus.py b/testing/libfuzzer/archive_corpus.py
+index dddc18ffaf..06b2bed974 100755
+--- a/testing/libfuzzer/archive_corpus.py
++++ b/testing/libfuzzer/archive_corpus.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/testing/libfuzzer/dictionary_generator.py b/testing/libfuzzer/dictionary_generator.py
+index b720e8e755..9b2189fa59 100755
+--- a/testing/libfuzzer/dictionary_generator.py
++++ b/testing/libfuzzer/dictionary_generator.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/testing/libfuzzer/gen_fuzzer_config.py b/testing/libfuzzer/gen_fuzzer_config.py
+index 7d45fcca6a..c6d1fc0fdd 100755
+--- a/testing/libfuzzer/gen_fuzzer_config.py
++++ b/testing/libfuzzer/gen_fuzzer_config.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright (c) 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/testing/libfuzzer/tests/check_fuzzer_config.py b/testing/libfuzzer/tests/check_fuzzer_config.py
+index 6a4ea8e210..b563074f5f 100755
+--- a/testing/libfuzzer/tests/check_fuzzer_config.py
++++ b/testing/libfuzzer/tests/check_fuzzer_config.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/testing/libfuzzer/tests/check_seed_corpus_archive.py b/testing/libfuzzer/tests/check_seed_corpus_archive.py
+index 5bbabd4e71..172175a4cb 100755
+--- a/testing/libfuzzer/tests/check_seed_corpus_archive.py
++++ b/testing/libfuzzer/tests/check_seed_corpus_archive.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ # Copyright 2017 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/testing/libfuzzer/zip_sources.py b/testing/libfuzzer/zip_sources.py
+index 946a7de9f2..5dc23af92f 100755
+--- a/testing/libfuzzer/zip_sources.py
++++ b/testing/libfuzzer/zip_sources.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/bmp_to_nv12.py b/third_party/angle/scripts/bmp_to_nv12.py
+index 10491658b3..4985b3c3cb 100755
+--- a/third_party/angle/scripts/bmp_to_nv12.py
++++ b/third_party/angle/scripts/bmp_to_nv12.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/file_exists.py b/third_party/angle/scripts/file_exists.py
+index 976bf546cf..4a2725e09b 100644
+--- a/third_party/angle/scripts/file_exists.py
++++ b/third_party/angle/scripts/file_exists.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/scripts/gen_vk_gl_cts_build.py b/third_party/angle/scripts/gen_vk_gl_cts_build.py
+index 51a6a722b3..0db66daea1 100644
+--- a/third_party/angle/scripts/gen_vk_gl_cts_build.py
++++ b/third_party/angle/scripts/gen_vk_gl_cts_build.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #  Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ #  Use of this source code is governed by a BSD-style license that can be
+ #  found in the LICENSE file.
+diff --git a/third_party/angle/scripts/generate_new_renderer.py b/third_party/angle/scripts/generate_new_renderer.py
+index cdc01358a7..e1b0d8f0aa 100755
+--- a/third_party/angle/scripts/generate_new_renderer.py
++++ b/third_party/angle/scripts/generate_new_renderer.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2015 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/msvs_projects.py b/third_party/angle/scripts/msvs_projects.py
+index f24a95216e..f52a3d7765 100755
+--- a/third_party/angle/scripts/msvs_projects.py
++++ b/third_party/angle/scripts/msvs_projects.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/perf_test_runner.py b/third_party/angle/scripts/perf_test_runner.py
+index 75021468a5..5b15d7021b 100755
+--- a/third_party/angle/scripts/perf_test_runner.py
++++ b/third_party/angle/scripts/perf_test_runner.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2015 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/remove_files.py b/third_party/angle/scripts/remove_files.py
+index 72b4c1db98..70bc624ff2 100755
+--- a/third_party/angle/scripts/remove_files.py
++++ b/third_party/angle/scripts/remove_files.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/trigger.py b/third_party/angle/scripts/trigger.py
+index ad25894d7d..60030df17e 100755
+--- a/third_party/angle/scripts/trigger.py
++++ b/third_party/angle/scripts/trigger.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/update_canary_angle.py b/third_party/angle/scripts/update_canary_angle.py
+index 5df46cc5f2..b335489ccc 100755
+--- a/third_party/angle/scripts/update_canary_angle.py
++++ b/third_party/angle/scripts/update_canary_angle.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/src/common/gen_packed_gl_enums.py b/third_party/angle/src/common/gen_packed_gl_enums.py
+index c7d563aec4..0675ec0a8c 100644
+--- a/third_party/angle/src/common/gen_packed_gl_enums.py
++++ b/third_party/angle/src/common/gen_packed_gl_enums.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ # Copyright 2018 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/d3d/d3d11/gen_blit11helper.py b/third_party/angle/src/libANGLE/renderer/d3d/d3d11/gen_blit11helper.py
+index a0f38fce9a..e61e5b403b 100644
+--- a/third_party/angle/src/libANGLE/renderer/d3d/d3d11/gen_blit11helper.py
++++ b/third_party/angle/src/libANGLE/renderer/d3d/d3d11/gen_blit11helper.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2018 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_mandatory_format_support_table.py b/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_mandatory_format_support_table.py
+index 7df4c2a813..39585ba295 100644
+--- a/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_mandatory_format_support_table.py
++++ b/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_mandatory_format_support_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ # Copyright 2018 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/tools/angle_tools.py b/third_party/angle/tools/angle_tools.py
+index f4d14c4cac..10bb675b03 100644
+--- a/third_party/angle/tools/angle_tools.py
++++ b/third_party/angle/tools/angle_tools.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/tools/flex-bison/update_flex_bison_binaries.py b/third_party/angle/tools/flex-bison/update_flex_bison_binaries.py
+index 99c002b04e..60a3b37436 100755
+--- a/third_party/angle/tools/flex-bison/update_flex_bison_binaries.py
++++ b/third_party/angle/tools/flex-bison/update_flex_bison_binaries.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/tools/glslang/update_glslang_binary.py b/third_party/angle/tools/glslang/update_glslang_binary.py
+index 1e2bb52561..1fec0a485b 100755
+--- a/third_party/angle/tools/glslang/update_glslang_binary.py
++++ b/third_party/angle/tools/glslang/update_glslang_binary.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/icu/scripts/make_data_assembly.py b/third_party/icu/scripts/make_data_assembly.py
+index 7e0cc49d49..6a910acb04 100755
+--- a/third_party/icu/scripts/make_data_assembly.py
++++ b/third_party/icu/scripts/make_data_assembly.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ 
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/openscreen/src/testing/libfuzzer/gen_fuzzer_config.py b/third_party/openscreen/src/testing/libfuzzer/gen_fuzzer_config.py
+index bde9e146ed..fb82038bbb 100755
+--- a/third_party/openscreen/src/testing/libfuzzer/gen_fuzzer_config.py
++++ b/third_party/openscreen/src/testing/libfuzzer/gen_fuzzer_config.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright (c) 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/skia/tools/add_codereview_message.py b/third_party/skia/tools/add_codereview_message.py
+index ea4afd845e..0121e19327 100755
+--- a/third_party/skia/tools/add_codereview_message.py
++++ b/third_party/skia/tools/add_codereview_message.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ 
+ # Copyright 2014 Google Inc.
+ #
+diff --git a/third_party/skia/tools/compare_codereview.py b/third_party/skia/tools/compare_codereview.py
+index a58b3c697b..6d31850930 100755
+--- a/third_party/skia/tools/compare_codereview.py
++++ b/third_party/skia/tools/compare_codereview.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ 
+ # Copyright 2014 Google Inc.
+ #
+diff --git a/third_party/skia/tools/rewrite_includes.py b/third_party/skia/tools/rewrite_includes.py
+index 6210b8a0c6..0545b2c9fe 100755
+--- a/third_party/skia/tools/rewrite_includes.py
++++ b/third_party/skia/tools/rewrite_includes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 Google Inc.
+ #
+diff --git a/third_party/skia/tools/skottie-wasm-perf/parse_perf_csvs.py b/third_party/skia/tools/skottie-wasm-perf/parse_perf_csvs.py
+index 89d27cda1c..1442035d41 100755
+--- a/third_party/skia/tools/skottie-wasm-perf/parse_perf_csvs.py
++++ b/third_party/skia/tools/skottie-wasm-perf/parse_perf_csvs.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 Google Inc.
+ #
+diff --git a/third_party/vulkan-deps/vulkan-validation-layers/src/build-gn/remove_files.py b/third_party/vulkan-deps/vulkan-validation-layers/src/build-gn/remove_files.py
+index 7095913af7..af602f6377 100755
+--- a/third_party/vulkan-deps/vulkan-validation-layers/src/build-gn/remove_files.py
++++ b/third_party/vulkan-deps/vulkan-validation-layers/src/build-gn/remove_files.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ 
+ # Copyright (C) 2019 The ANGLE Project Authors.
+ #
+diff --git a/third_party/webrtc/modules/audio_coding/audio_network_adaptor/parse_ana_dump.py b/third_party/webrtc/modules/audio_coding/audio_network_adaptor/parse_ana_dump.py
+index 9c07c18c84..7aed74ae37 100755
+--- a/third_party/webrtc/modules/audio_coding/audio_network_adaptor/parse_ana_dump.py
++++ b/third_party/webrtc/modules/audio_coding/audio_network_adaptor/parse_ana_dump.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ #  Copyright (c) 2017 The WebRTC project authors. All Rights Reserved.
+ #
+ #  Use of this source code is governed by a BSD-style license
+diff --git a/tools/android/wpr/chrome_proxy_wpr_record.py b/tools/android/wpr/chrome_proxy_wpr_record.py
+index a3cd290056..2a7e298ad0 100755
+--- a/tools/android/wpr/chrome_proxy_wpr_record.py
++++ b/tools/android/wpr/chrome_proxy_wpr_record.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ # Copyright 2021 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/tools/android/wpr/chrome_proxy_wpr_replay.py b/tools/android/wpr/chrome_proxy_wpr_replay.py
+index aabc543102..569c8fd392 100755
+--- a/tools/android/wpr/chrome_proxy_wpr_replay.py
++++ b/tools/android/wpr/chrome_proxy_wpr_replay.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/env python3
+ # Copyright 2021 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.

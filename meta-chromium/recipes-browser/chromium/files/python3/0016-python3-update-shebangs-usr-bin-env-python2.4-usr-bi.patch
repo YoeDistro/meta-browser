@@ -1,0 +1,45 @@
+From a3ef5d01a04f1252fecb2ba822c923a490e9b282 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 15:17:17 +0200
+Subject: [PATCH] python3: update shebangs '^#!/usr/bin/env python2.4'
+ '^#!/usr/bin/env python3.6'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ .../catapult/third_party/Paste/paste/debug/doctest_webapp.py    | 2 +-
+ .../gsutil/third_party/httplib2/python2/httplib2test.py         | 2 +-
+ .../gsutil/third_party/httplib2/python2/httplib2test.py         | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/third_party/catapult/third_party/Paste/paste/debug/doctest_webapp.py b/third_party/catapult/third_party/Paste/paste/debug/doctest_webapp.py
+index ffcfaa7436..eef8f21656 100755
+--- a/third_party/catapult/third_party/Paste/paste/debug/doctest_webapp.py
++++ b/third_party/catapult/third_party/Paste/paste/debug/doctest_webapp.py
+@@ -1,6 +1,6 @@
+ # (c) 2005 Ian Bicking and contributors; written for Paste (http://pythonpaste.org)
+ # Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+-#!/usr/bin/env python2.4
++#!/usr/bin/env python3
+ # (c) 2005 Ian Bicking and contributors; written for Paste (http://pythonpaste.org)
+ # Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+ 
+diff --git a/third_party/catapult/third_party/gsutil/third_party/httplib2/python2/httplib2test.py b/third_party/catapult/third_party/gsutil/third_party/httplib2/python2/httplib2test.py
+index 82faabc0d6..ebca6e50a7 100644
+--- a/third_party/catapult/third_party/gsutil/third_party/httplib2/python2/httplib2test.py
++++ b/third_party/catapult/third_party/gsutil/third_party/httplib2/python2/httplib2test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.4
++#!/usr/bin/env python3
+ """
+ httplib2test
+ 
+diff --git a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/httplib2/python2/httplib2test.py b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/httplib2/python2/httplib2test.py
+index 472424bdbc..7821e1ff76 100644
+--- a/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/httplib2/python2/httplib2test.py
++++ b/third_party/depot_tools/external_bin/gsutil/gsutil_4.28/gsutil/third_party/httplib2/python2/httplib2test.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.4
++#!/usr/bin/env python3
+ """
+ httplib2test
+ 

@@ -1,0 +1,581 @@
+From 01d3224aa5f91254353f972296c53a485f0abc53 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:49 +0200
+Subject: [PATCH] python3: update shebangs '^#!/usr/bin/python3$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ build/apple/xcrun.py                                            | 2 +-
+ chrome/updater/tools/tag.py                                     | 2 +-
+ chrome/updater/win/signing/sign.py                              | 2 +-
+ components/feed/core/v2/tools/protoc_util.py                    | 2 +-
+ components/feed/core/v2/tools/stream_dump.py                    | 2 +-
+ components/feed/core/v2/tools/textpb_to_binarypb.py             | 2 +-
+ native_client/build/update_pnacl_tool_revisions.py              | 2 +-
+ remoting/host/linux/linux_me2me_host.py                         | 2 +-
+ remoting/host/linux/setup_url_forwarder.py                      | 2 +-
+ third_party/angle/scripts/bootstrap.py                          | 2 +-
+ third_party/angle/scripts/gen_gl_enum_utils.py                  | 2 +-
+ third_party/angle/scripts/gen_proc_table.py                     | 2 +-
+ third_party/angle/scripts/generate_entry_points.py              | 2 +-
+ third_party/angle/scripts/generate_loader.py                    | 2 +-
+ third_party/angle/scripts/registry_xml.py                       | 2 +-
+ third_party/angle/scripts/run_code_generation.py                | 2 +-
+ third_party/angle/src/common/gen_uniform_type_table.py          | 2 +-
+ third_party/angle/src/compiler/generate_parser_tools.py         | 2 +-
+ .../compiler/translator/gen_emulated_builtin_function_tables.py | 2 +-
+ third_party/angle/src/libANGLE/gen_copy_conversion_table.py     | 2 +-
+ third_party/angle/src/libANGLE/gen_format_map.py                | 2 +-
+ third_party/angle/src/libANGLE/renderer/angle_format.py         | 2 +-
+ .../src/libANGLE/renderer/d3d/d3d11/gen_texture_format_table.py | 2 +-
+ .../angle/src/libANGLE/renderer/gen_angle_format_table.py       | 2 +-
+ .../angle/src/libANGLE/renderer/gen_dxgi_format_table.py        | 2 +-
+ .../angle/src/libANGLE/renderer/gen_dxgi_support_tables.py      | 2 +-
+ .../angle/src/libANGLE/renderer/gen_load_functions_table.py     | 2 +-
+ .../src/libANGLE/renderer/gl/generate_gl_dispatch_table.py      | 2 +-
+ .../angle/src/libANGLE/renderer/metal/gen_mtl_format_table.py   | 2 +-
+ .../libANGLE/renderer/metal/shaders/gen_mtl_internal_shaders.py | 2 +-
+ .../angle/src/libANGLE/renderer/vulkan/gen_vk_format_table.py   | 2 +-
+ .../src/libANGLE/renderer/vulkan/gen_vk_internal_shaders.py     | 2 +-
+ .../angle/src/tests/restricted_traces/gen_restricted_traces.py  | 2 +-
+ .../tests/restricted_traces/sync_restricted_traces_to_cipd.py   | 2 +-
+ .../src/external/vulkancts/scripts/gen_vulkan_header.py         | 2 +-
+ third_party/ffmpeg/chromium/scripts/credits_updater_unittest.py | 2 +-
+ third_party/ffmpeg/chromium/scripts/generate_gn_unittest.py     | 2 +-
+ .../llvm/llvm/utils/lit/tests/check-tested-lit-timeout-ability  | 2 +-
+ third_party/nasm/travis/nasm-t.py                               | 2 +-
+ third_party/opus/src/training/rnn_train.py                      | 2 +-
+ .../lite/micro/tools/make/targets/ecm3531/flash_erase           | 2 +-
+ .../lite/micro/tools/make/targets/ecm3531/flash_program         | 2 +-
+ .../lite/micro/tools/make/targets/ecm3531/load_program          | 2 +-
+ third_party/vulkan-deps/vulkan-headers/src/registry/genvk.py    | 2 +-
+ .../vulkan-deps/vulkan-loader/src/scripts/loader_genvk.py       | 2 +-
+ third_party/vulkan-deps/vulkan-tools/src/scripts/kvt_genvk.py   | 2 +-
+ .../vulkan-tools/src/scripts/vulkaninfo_generator.py            | 2 +-
+ .../vulkan-validation-layers/src/scripts/lvl_genvk.py           | 2 +-
+ tools/binary_size/generate_official_build_report.py             | 2 +-
+ tools/gn/examples/ios/build/toolchain/apple/swiftc.py           | 2 +-
+ tools/memory/partition_allocator/profile_allocations.py         | 2 +-
+ v8/tools/generate-runtime-call-stats.py                         | 2 +-
+ 52 files changed, 52 insertions(+), 52 deletions(-)
+
+diff --git a/build/apple/xcrun.py b/build/apple/xcrun.py
+index 71bf50c352..c5054949de 100755
+--- a/build/apple/xcrun.py
++++ b/build/apple/xcrun.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/chrome/updater/tools/tag.py b/chrome/updater/tools/tag.py
+index 9d82206952..388a60d440 100755
+--- a/chrome/updater/tools/tag.py
++++ b/chrome/updater/tools/tag.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/chrome/updater/win/signing/sign.py b/chrome/updater/win/signing/sign.py
+index 420fff8fec..75a6fd56be 100755
+--- a/chrome/updater/win/signing/sign.py
++++ b/chrome/updater/win/signing/sign.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/components/feed/core/v2/tools/protoc_util.py b/components/feed/core/v2/tools/protoc_util.py
+index 2d2ce70da0..6c057428ba 100755
+--- a/components/feed/core/v2/tools/protoc_util.py
++++ b/components/feed/core/v2/tools/protoc_util.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/components/feed/core/v2/tools/stream_dump.py b/components/feed/core/v2/tools/stream_dump.py
+index c6a0040bbc..9df5d01911 100755
+--- a/components/feed/core/v2/tools/stream_dump.py
++++ b/components/feed/core/v2/tools/stream_dump.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2019 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/components/feed/core/v2/tools/textpb_to_binarypb.py b/components/feed/core/v2/tools/textpb_to_binarypb.py
+index ef07d256c3..0c8e569357 100755
+--- a/components/feed/core/v2/tools/textpb_to_binarypb.py
++++ b/components/feed/core/v2/tools/textpb_to_binarypb.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/build/update_pnacl_tool_revisions.py b/native_client/build/update_pnacl_tool_revisions.py
+index 6e88800c76..4ae578dda2 100755
+--- a/native_client/build/update_pnacl_tool_revisions.py
++++ b/native_client/build/update_pnacl_tool_revisions.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright (c) 2013 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/remoting/host/linux/linux_me2me_host.py b/remoting/host/linux/linux_me2me_host.py
+index 1800ced094..ec7cc1ad07 100755
+--- a/remoting/host/linux/linux_me2me_host.py
++++ b/remoting/host/linux/linux_me2me_host.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/remoting/host/linux/setup_url_forwarder.py b/remoting/host/linux/setup_url_forwarder.py
+index 3b2b9f4cc2..dbf1fbcd0b 100755
+--- a/remoting/host/linux/setup_url_forwarder.py
++++ b/remoting/host/linux/setup_url_forwarder.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2021 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/scripts/bootstrap.py b/third_party/angle/scripts/bootstrap.py
+index 5683d1fc81..8598b8267c 100755
+--- a/third_party/angle/scripts/bootstrap.py
++++ b/third_party/angle/scripts/bootstrap.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 Google Inc.  All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/gen_gl_enum_utils.py b/third_party/angle/scripts/gen_gl_enum_utils.py
+index f849a7252b..70f45932a8 100755
+--- a/third_party/angle/scripts/gen_gl_enum_utils.py
++++ b/third_party/angle/scripts/gen_gl_enum_utils.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/gen_proc_table.py b/third_party/angle/scripts/gen_proc_table.py
+index 6d45bd05ce..4fe7fd3146 100644
+--- a/third_party/angle/scripts/gen_proc_table.py
++++ b/third_party/angle/scripts/gen_proc_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2017 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/scripts/generate_entry_points.py b/third_party/angle/scripts/generate_entry_points.py
+index 19132e4839..c276f7c929 100755
+--- a/third_party/angle/scripts/generate_entry_points.py
++++ b/third_party/angle/scripts/generate_entry_points.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/generate_loader.py b/third_party/angle/scripts/generate_loader.py
+index ef3a8a5bd3..3742168231 100755
+--- a/third_party/angle/scripts/generate_loader.py
++++ b/third_party/angle/scripts/generate_loader.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2018 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/registry_xml.py b/third_party/angle/scripts/registry_xml.py
+index 25a7c57be4..55f98fab88 100644
+--- a/third_party/angle/scripts/registry_xml.py
++++ b/third_party/angle/scripts/registry_xml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2018 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/scripts/run_code_generation.py b/third_party/angle/scripts/run_code_generation.py
+index 94908e0ed3..594365d11c 100755
+--- a/third_party/angle/scripts/run_code_generation.py
++++ b/third_party/angle/scripts/run_code_generation.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/src/common/gen_uniform_type_table.py b/third_party/angle/src/common/gen_uniform_type_table.py
+index f47685f4bc..b4b4ea12f8 100644
+--- a/third_party/angle/src/common/gen_uniform_type_table.py
++++ b/third_party/angle/src/common/gen_uniform_type_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2017 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/compiler/generate_parser_tools.py b/third_party/angle/src/compiler/generate_parser_tools.py
+index 287d0a0543..c1b0c5cc53 100644
+--- a/third_party/angle/src/compiler/generate_parser_tools.py
++++ b/third_party/angle/src/compiler/generate_parser_tools.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/compiler/translator/gen_emulated_builtin_function_tables.py b/third_party/angle/src/compiler/translator/gen_emulated_builtin_function_tables.py
+index b59afeef8d..e738f4e3fd 100644
+--- a/third_party/angle/src/compiler/translator/gen_emulated_builtin_function_tables.py
++++ b/third_party/angle/src/compiler/translator/gen_emulated_builtin_function_tables.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2017 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/gen_copy_conversion_table.py b/third_party/angle/src/libANGLE/gen_copy_conversion_table.py
+index b95750e137..5d77d374d3 100644
+--- a/third_party/angle/src/libANGLE/gen_copy_conversion_table.py
++++ b/third_party/angle/src/libANGLE/gen_copy_conversion_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2016 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/gen_format_map.py b/third_party/angle/src/libANGLE/gen_format_map.py
+index eb9e46a007..0e839d8be9 100644
+--- a/third_party/angle/src/libANGLE/gen_format_map.py
++++ b/third_party/angle/src/libANGLE/gen_format_map.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2016 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/angle_format.py b/third_party/angle/src/libANGLE/renderer/angle_format.py
+index b6b4170f42..6bfdfecd88 100644
+--- a/third_party/angle/src/libANGLE/renderer/angle_format.py
++++ b/third_party/angle/src/libANGLE/renderer/angle_format.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2016 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/d3d/d3d11/gen_texture_format_table.py b/third_party/angle/src/libANGLE/renderer/d3d/d3d11/gen_texture_format_table.py
+index 21824cfa94..b29d43e7c6 100644
+--- a/third_party/angle/src/libANGLE/renderer/d3d/d3d11/gen_texture_format_table.py
++++ b/third_party/angle/src/libANGLE/renderer/d3d/d3d11/gen_texture_format_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2015 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/gen_angle_format_table.py b/third_party/angle/src/libANGLE/renderer/gen_angle_format_table.py
+index 8650950e1a..b10a95891f 100644
+--- a/third_party/angle/src/libANGLE/renderer/gen_angle_format_table.py
++++ b/third_party/angle/src/libANGLE/renderer/gen_angle_format_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2016 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/gen_dxgi_format_table.py b/third_party/angle/src/libANGLE/renderer/gen_dxgi_format_table.py
+index 1e1390aa1e..731fca37a8 100644
+--- a/third_party/angle/src/libANGLE/renderer/gen_dxgi_format_table.py
++++ b/third_party/angle/src/libANGLE/renderer/gen_dxgi_format_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2016 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/gen_dxgi_support_tables.py b/third_party/angle/src/libANGLE/renderer/gen_dxgi_support_tables.py
+index a688063a72..8995fa9c9f 100644
+--- a/third_party/angle/src/libANGLE/renderer/gen_dxgi_support_tables.py
++++ b/third_party/angle/src/libANGLE/renderer/gen_dxgi_support_tables.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2015 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/gen_load_functions_table.py b/third_party/angle/src/libANGLE/renderer/gen_load_functions_table.py
+index e607392884..9d45b1a416 100755
+--- a/third_party/angle/src/libANGLE/renderer/gen_load_functions_table.py
++++ b/third_party/angle/src/libANGLE/renderer/gen_load_functions_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2015 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/gl/generate_gl_dispatch_table.py b/third_party/angle/src/libANGLE/renderer/gl/generate_gl_dispatch_table.py
+index 4307add77c..8eecb0def7 100644
+--- a/third_party/angle/src/libANGLE/renderer/gl/generate_gl_dispatch_table.py
++++ b/third_party/angle/src/libANGLE/renderer/gl/generate_gl_dispatch_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2017 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/metal/gen_mtl_format_table.py b/third_party/angle/src/libANGLE/renderer/metal/gen_mtl_format_table.py
+index c1adf793ed..b6ca7eb7a3 100644
+--- a/third_party/angle/src/libANGLE/renderer/metal/gen_mtl_format_table.py
++++ b/third_party/angle/src/libANGLE/renderer/metal/gen_mtl_format_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/metal/shaders/gen_mtl_internal_shaders.py b/third_party/angle/src/libANGLE/renderer/metal/shaders/gen_mtl_internal_shaders.py
+index 11202f430b..ebf1c7bdfe 100644
+--- a/third_party/angle/src/libANGLE/renderer/metal/shaders/gen_mtl_internal_shaders.py
++++ b/third_party/angle/src/libANGLE/renderer/metal/shaders/gen_mtl_internal_shaders.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_format_table.py b/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_format_table.py
+index 423201156d..60566a166e 100644
+--- a/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_format_table.py
++++ b/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_format_table.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2016 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_internal_shaders.py b/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_internal_shaders.py
+index f9ef3cd9ce..7f2a246c23 100644
+--- a/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_internal_shaders.py
++++ b/third_party/angle/src/libANGLE/renderer/vulkan/gen_vk_internal_shaders.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2018 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/tests/restricted_traces/gen_restricted_traces.py b/third_party/angle/src/tests/restricted_traces/gen_restricted_traces.py
+index e315d72908..54dab7750f 100644
+--- a/third_party/angle/src/tests/restricted_traces/gen_restricted_traces.py
++++ b/third_party/angle/src/tests/restricted_traces/gen_restricted_traces.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2020 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/src/tests/restricted_traces/sync_restricted_traces_to_cipd.py b/third_party/angle/src/tests/restricted_traces/sync_restricted_traces_to_cipd.py
+index 224dfb3876..f02f4425eb 100644
+--- a/third_party/angle/src/tests/restricted_traces/sync_restricted_traces_to_cipd.py
++++ b/third_party/angle/src/tests/restricted_traces/sync_restricted_traces_to_cipd.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2021 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/angle/third_party/VK-GL-CTS/src/external/vulkancts/scripts/gen_vulkan_header.py b/third_party/angle/third_party/VK-GL-CTS/src/external/vulkancts/scripts/gen_vulkan_header.py
+index bb5ea97fb7..f78ee79259 100644
+--- a/third_party/angle/third_party/VK-GL-CTS/src/external/vulkancts/scripts/gen_vulkan_header.py
++++ b/third_party/angle/third_party/VK-GL-CTS/src/external/vulkancts/scripts/gen_vulkan_header.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright (c) 2018 The Khronos Group Inc.
+ # Copyright (c) 2018 Google Inc.
+diff --git a/third_party/ffmpeg/chromium/scripts/credits_updater_unittest.py b/third_party/ffmpeg/chromium/scripts/credits_updater_unittest.py
+index 6e999265c3..d8c11585da 100755
+--- a/third_party/ffmpeg/chromium/scripts/credits_updater_unittest.py
++++ b/third_party/ffmpeg/chromium/scripts/credits_updater_unittest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/ffmpeg/chromium/scripts/generate_gn_unittest.py b/third_party/ffmpeg/chromium/scripts/generate_gn_unittest.py
+index cc7d5ecf11..f3d81895ad 100755
+--- a/third_party/ffmpeg/chromium/scripts/generate_gn_unittest.py
++++ b/third_party/ffmpeg/chromium/scripts/generate_gn_unittest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright (c) 2011 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/llvm/llvm/utils/lit/tests/check-tested-lit-timeout-ability b/third_party/llvm/llvm/utils/lit/tests/check-tested-lit-timeout-ability
+index 3b8dc13905..47de16f22e 100755
+--- a/third_party/llvm/llvm/utils/lit/tests/check-tested-lit-timeout-ability
++++ b/third_party/llvm/llvm/utils/lit/tests/check-tested-lit-timeout-ability
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ 
+ import sys
+ from lit.util import killProcessAndChildrenIsSupported
+diff --git a/third_party/nasm/travis/nasm-t.py b/third_party/nasm/travis/nasm-t.py
+index 8a2ddb4981..87567a3ab7 100755
+--- a/third_party/nasm/travis/nasm-t.py
++++ b/third_party/nasm/travis/nasm-t.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ 
+ import subprocess
+ import argparse
+diff --git a/third_party/opus/src/training/rnn_train.py b/third_party/opus/src/training/rnn_train.py
+index 29bcb03463..3b2933aa6f 100755
+--- a/third_party/opus/src/training/rnn_train.py
++++ b/third_party/opus/src/training/rnn_train.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/flash_erase b/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/flash_erase
+index 66b506e71f..755c760ae9 100755
+--- a/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/flash_erase
++++ b/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/flash_erase
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #Usage: cd to the directory  tensorflow/lite/micro/tools/make/targets/ecm3531 and type ./flash_erase to erase the flash.
+ #
+ #
+diff --git a/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/flash_program b/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/flash_program
+index 8f72ac3604..3c499a08f9 100755
+--- a/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/flash_program
++++ b/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/flash_program
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #Usage: cd to the directory  tensorflow/lite/micro/tools/make/targets/ecm3531 and type ./flash_program executable_name to load an executable from the directory tensorflow/lite/micro/tools/make/gen/ecm3531_cortex-m3/bin/ into flash
+ #
+ #
+diff --git a/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/load_program b/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/load_program
+index a6bf6fef1e..a84f3ae47e 100755
+--- a/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/load_program
++++ b/third_party/tflite/src/tensorflow/lite/micro/tools/make/targets/ecm3531/load_program
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #Usage: cd to the directory  tensorflow/lite/micro/tools/make/targets/ecm3531 and type ./load_prgram executable_name to load an executable from the directory tensorflow/lite/micro/tools/make/gen/ecm3531_cortex-m3/bin/
+ #
+ #
+diff --git a/third_party/vulkan-deps/vulkan-headers/src/registry/genvk.py b/third_party/vulkan-deps/vulkan-headers/src/registry/genvk.py
+index 069ee68bf1..fde319b8fc 100755
+--- a/third_party/vulkan-deps/vulkan-headers/src/registry/genvk.py
++++ b/third_party/vulkan-deps/vulkan-headers/src/registry/genvk.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright 2013-2021 The Khronos Group Inc.
+ #
+diff --git a/third_party/vulkan-deps/vulkan-loader/src/scripts/loader_genvk.py b/third_party/vulkan-deps/vulkan-loader/src/scripts/loader_genvk.py
+index 7c81858804..f44252fb42 100644
+--- a/third_party/vulkan-deps/vulkan-loader/src/scripts/loader_genvk.py
++++ b/third_party/vulkan-deps/vulkan-loader/src/scripts/loader_genvk.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright (c) 2013-2019 The Khronos Group Inc.
+ #
+diff --git a/third_party/vulkan-deps/vulkan-tools/src/scripts/kvt_genvk.py b/third_party/vulkan-deps/vulkan-tools/src/scripts/kvt_genvk.py
+index 8cd3e1bebc..9aaa2567c0 100644
+--- a/third_party/vulkan-deps/vulkan-tools/src/scripts/kvt_genvk.py
++++ b/third_party/vulkan-deps/vulkan-tools/src/scripts/kvt_genvk.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright (c) 2013-2019 The Khronos Group Inc.
+ #
+diff --git a/third_party/vulkan-deps/vulkan-tools/src/scripts/vulkaninfo_generator.py b/third_party/vulkan-deps/vulkan-tools/src/scripts/vulkaninfo_generator.py
+index 30b938c4a9..50fad8f346 100644
+--- a/third_party/vulkan-deps/vulkan-tools/src/scripts/vulkaninfo_generator.py
++++ b/third_party/vulkan-deps/vulkan-tools/src/scripts/vulkaninfo_generator.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright (c) 2019 Valve Corporation
+ # Copyright (c) 2019 LunarG, Inc.
+diff --git a/third_party/vulkan-deps/vulkan-validation-layers/src/scripts/lvl_genvk.py b/third_party/vulkan-deps/vulkan-validation-layers/src/scripts/lvl_genvk.py
+index 3d143dbc2a..2ce26725d6 100644
+--- a/third_party/vulkan-deps/vulkan-validation-layers/src/scripts/lvl_genvk.py
++++ b/third_party/vulkan-deps/vulkan-validation-layers/src/scripts/lvl_genvk.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ #
+ # Copyright (c) 2013-2019 The Khronos Group Inc.
+ #
+diff --git a/tools/binary_size/generate_official_build_report.py b/tools/binary_size/generate_official_build_report.py
+index 1759328b7b..b254e5ce5b 100755
+--- a/tools/binary_size/generate_official_build_report.py
++++ b/tools/binary_size/generate_official_build_report.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2019 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/tools/gn/examples/ios/build/toolchain/apple/swiftc.py b/tools/gn/examples/ios/build/toolchain/apple/swiftc.py
+index 88ae6e5ce4..45bc23971b 100755
+--- a/tools/gn/examples/ios/build/toolchain/apple/swiftc.py
++++ b/tools/gn/examples/ios/build/toolchain/apple/swiftc.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ 
+ 
+ import argparse
+diff --git a/tools/memory/partition_allocator/profile_allocations.py b/tools/memory/partition_allocator/profile_allocations.py
+index dffd31374d..236c1ddda0 100755
+--- a/tools/memory/partition_allocator/profile_allocations.py
++++ b/tools/memory/partition_allocator/profile_allocations.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2021 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/v8/tools/generate-runtime-call-stats.py b/v8/tools/generate-runtime-call-stats.py
+index ba10b799a1..b19007e036 100755
+--- a/v8/tools/generate-runtime-call-stats.py
++++ b/v8/tools/generate-runtime-call-stats.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python3
++#!/usr/bin/env python3
+ # Copyright 2019 the V8 project authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.

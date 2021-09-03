@@ -1,0 +1,42 @@
+From a2aabc19de529cecad267d0f09db7535c54ab0fd Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:51 +0200
+Subject: [PATCH] python3: update shebangs '^#!/usr/bin/python -u$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ third_party/libxml/src/genUnicode.py  | 2 +-
+ third_party/libxml/src/gentest.py     | 2 +-
+ third_party/libxml/src/regressions.py | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/third_party/libxml/src/genUnicode.py b/third_party/libxml/src/genUnicode.py
+index 4487eeb5ca..e88a8326f4 100755
+--- a/third_party/libxml/src/genUnicode.py
++++ b/third_party/libxml/src/genUnicode.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python -u
++#!/usr/bin/env python3 -u
+ #
+ # Original script modified in November 2003 to take advantage of
+ # the character-validation range routines, and updated to the
+diff --git a/third_party/libxml/src/gentest.py b/third_party/libxml/src/gentest.py
+index b6cd866c1b..0f272c9d20 100755
+--- a/third_party/libxml/src/gentest.py
++++ b/third_party/libxml/src/gentest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python -u
++#!/usr/bin/env python3 -u
+ #
+ # generate a tester program for the API
+ #
+diff --git a/third_party/libxml/src/regressions.py b/third_party/libxml/src/regressions.py
+index 0e813c2ea3..20d72c8376 100755
+--- a/third_party/libxml/src/regressions.py
++++ b/third_party/libxml/src/regressions.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python -u
++#!/usr/bin/env python3 -u
+ import glob, os, string, sys, thread, time
+ # import difflib
+ import libxml2

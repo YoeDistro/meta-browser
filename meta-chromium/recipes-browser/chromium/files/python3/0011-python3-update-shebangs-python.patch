@@ -1,0 +1,97 @@
+From 14d2af9be8acb50e4befa0a22ae8a45c9be55aa5 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:51 +0200
+Subject: [PATCH] python3: update shebangs '^#! python$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ third_party/catapult/third_party/pyserial/serial/rfc2217.py     | 2 +-
+ third_party/catapult/third_party/pyserial/serial/serialcli.py   | 2 +-
+ third_party/catapult/third_party/pyserial/serial/serialutil.py  | 2 +-
+ third_party/catapult/third_party/pyserial/serial/serialwin32.py | 2 +-
+ .../third_party/pyserial/serial/urlhandler/protocol_hwgrep.py   | 2 +-
+ .../third_party/pyserial/serial/urlhandler/protocol_loop.py     | 2 +-
+ .../third_party/pyserial/serial/urlhandler/protocol_rfc2217.py  | 2 +-
+ .../third_party/pyserial/serial/urlhandler/protocol_socket.py   | 2 +-
+ 8 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/third_party/catapult/third_party/pyserial/serial/rfc2217.py b/third_party/catapult/third_party/pyserial/serial/rfc2217.py
+index 2012ea71c1..7f8b12c6b3 100644
+--- a/third_party/catapult/third_party/pyserial/serial/rfc2217.py
++++ b/third_party/catapult/third_party/pyserial/serial/rfc2217.py
+@@ -1,4 +1,4 @@
+-#! python
++#!/usr/bin/env python3
+ #
+ # Python Serial Port Extension for Win32, Linux, BSD, Jython
+ # see __init__.py
+diff --git a/third_party/catapult/third_party/pyserial/serial/serialcli.py b/third_party/catapult/third_party/pyserial/serial/serialcli.py
+index 19169a34d8..3b0db831b2 100644
+--- a/third_party/catapult/third_party/pyserial/serial/serialcli.py
++++ b/third_party/catapult/third_party/pyserial/serial/serialcli.py
+@@ -1,4 +1,4 @@
+-#! python
++#!/usr/bin/env python3
+ # Python Serial Port Extension for Win32, Linux, BSD, Jython and .NET/Mono
+ # serial driver for .NET/Mono (IronPython), .NET >= 2
+ # see __init__.py
+diff --git a/third_party/catapult/third_party/pyserial/serial/serialutil.py b/third_party/catapult/third_party/pyserial/serial/serialutil.py
+index f28ece454f..2aafe146bc 100644
+--- a/third_party/catapult/third_party/pyserial/serial/serialutil.py
++++ b/third_party/catapult/third_party/pyserial/serial/serialutil.py
+@@ -1,4 +1,4 @@
+-#! python
++#!/usr/bin/env python3
+ # Python Serial Port Extension for Win32, Linux, BSD, Jython
+ # see __init__.py
+ #
+diff --git a/third_party/catapult/third_party/pyserial/serial/serialwin32.py b/third_party/catapult/third_party/pyserial/serial/serialwin32.py
+index dfdd9536a6..eed9f090bd 100644
+--- a/third_party/catapult/third_party/pyserial/serial/serialwin32.py
++++ b/third_party/catapult/third_party/pyserial/serial/serialwin32.py
+@@ -1,4 +1,4 @@
+-#! python
++#!/usr/bin/env python3
+ # Python Serial Port Extension for Win32, Linux, BSD, Jython
+ # serial driver for win32
+ # see __init__.py
+diff --git a/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_hwgrep.py b/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_hwgrep.py
+index 62cda43aa7..3ed76681cc 100644
+--- a/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_hwgrep.py
++++ b/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_hwgrep.py
+@@ -1,4 +1,4 @@
+-#! python
++#!/usr/bin/env python3
+ #
+ # Python Serial Port Extension for Win32, Linux, BSD, Jython
+ # see __init__.py
+diff --git a/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_loop.py b/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_loop.py
+index 7da94ad160..6d93797ad2 100644
+--- a/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_loop.py
++++ b/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_loop.py
+@@ -1,4 +1,4 @@
+-#! python
++#!/usr/bin/env python3
+ #
+ # Python Serial Port Extension for Win32, Linux, BSD, Jython
+ # see __init__.py
+diff --git a/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_rfc2217.py b/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_rfc2217.py
+index 981ba45fea..6251ab19a0 100644
+--- a/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_rfc2217.py
++++ b/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_rfc2217.py
+@@ -1,4 +1,4 @@
+-#! python
++#!/usr/bin/env python3
+ #
+ # Python Serial Port Extension for Win32, Linux, BSD, Jython
+ # see ../__init__.py
+diff --git a/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_socket.py b/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_socket.py
+index c90a8e4aa5..3e5763e1e0 100644
+--- a/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_socket.py
++++ b/third_party/catapult/third_party/pyserial/serial/urlhandler/protocol_socket.py
+@@ -1,4 +1,4 @@
+-#! python
++#!/usr/bin/env python3
+ #
+ # Python Serial Port Extension for Win32, Linux, BSD, Jython
+ # see __init__.py

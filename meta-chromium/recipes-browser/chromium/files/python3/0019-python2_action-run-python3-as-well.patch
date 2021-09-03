@@ -1,0 +1,22 @@
+From 66636e7b8582cc9cba2ed797a87917668e02e7cf Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:28:21 +0200
+Subject: [PATCH] python2_action: run python3 as well
+
+* I know it's wrong place to change this, it's just to try
+---
+ build/util/python2_action.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/build/util/python2_action.py b/build/util/python2_action.py
+index 609665b002..3537eb6d89 100644
+--- a/build/util/python2_action.py
++++ b/build/util/python2_action.py
+@@ -22,6 +22,6 @@ elif sys.executable.endswith('.exe'):
+ else:
+   # If we get here, we are a Python3 executable. Hope that we can find
+   # a `python2.7` in path somewhere.
+-  exe = 'python2.7'
++  exe = 'python3'
+ 
+ sys.exit(subprocess.call([exe] + sys.argv[1:]))

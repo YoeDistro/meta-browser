@@ -1,0 +1,122 @@
+From fa4a4d545f2ec026e342f59a6cd1ca4d1aa44d60 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 15:42:46 +0200
+Subject: [PATCH] python3: update shebangs in some other cases
+
+Some look really broken like #!/usr/bin/env/python
+
+$ grep -v python3 shebangs.txt | grep -v bin/sh | grep -v bash | grep -v vpython | grep -v mscgen | grep -v ^Binary.file | grep -v xdg-open | grep -v aws | grep -v env.node | grep -v env.ruby | grep -v tclsh | grep -v bin/tcl | grep -v env.perl | grep -v env.sh | grep -v bin/perl$ | grep -v osascript | grep -v bin/ruby$ | grep -v '$SHELL' | grep -v bin/make.-f$ | grep -v bin/perl.-w$ | grep -v /bin/true$ | grep -v bin/perl.-l$ | grep -v amber$ | grep -v powershell$ | grep -v '\.rs:#!\[' | grep python
+
+build/print_python_deps.py:#!/usr/bin/python2.7
+native_client/SConstruct:#! -*- python -*-
+native_client/tests/callingconv/generate.py:#!/usr/bin/python2.6
+native_client/tests/faulted_thread_queue/nacl.scons:#! -*- python -*-
+ppapi/native_client/chrome_main.scons:#! -*- python -*-
+third_party/liblouis/src/python/examples/liblouisxslt.py:#! /usr/bin/python -u
+third_party/llvm/mlir/python/mlir/dialects/linalg/opdsl/dump_oplib.py:#!/usr/bin/which python
+third_party/webrtc/tools_webrtc/executable_host_build.py:#!/usr/bin/env/python
+v8/tools/ignition/linux_perf_report.py:#! /usr/bin/python2
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ build/print_python_deps.py                                      | 2 +-
+ native_client/SConstruct                                        | 2 +-
+ native_client/tests/callingconv/generate.py                     | 2 +-
+ native_client/tests/faulted_thread_queue/nacl.scons             | 2 +-
+ ppapi/native_client/chrome_main.scons                           | 2 +-
+ third_party/liblouis/src/python/examples/liblouisxslt.py        | 2 +-
+ .../llvm/mlir/python/mlir/dialects/linalg/opdsl/dump_oplib.py   | 2 +-
+ third_party/webrtc/tools_webrtc/executable_host_build.py        | 2 +-
+ v8/tools/ignition/linux_perf_report.py                          | 2 +-
+ 9 files changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/build/print_python_deps.py b/build/print_python_deps.py
+index e56783477a..c34c81e3b5 100755
+--- a/build/print_python_deps.py
++++ b/build/print_python_deps.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.7
++#!/usr/bin/env python3
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/SConstruct b/native_client/SConstruct
+index 81d0781959..f112cbdb4f 100755
+--- a/native_client/SConstruct
++++ b/native_client/SConstruct
+@@ -1,4 +1,4 @@
+-#! -*- python -*-
++#!/usr/bin/env python3
+ # Copyright (c) 2012 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/tests/callingconv/generate.py b/native_client/tests/callingconv/generate.py
+index eef0c97b41..bad00b0a53 100755
+--- a/native_client/tests/callingconv/generate.py
++++ b/native_client/tests/callingconv/generate.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.6
++#!/usr/bin/env python3
+ # Copyright (c) 2012 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/native_client/tests/faulted_thread_queue/nacl.scons b/native_client/tests/faulted_thread_queue/nacl.scons
+index cc050554ad..ef747d89a9 100644
+--- a/native_client/tests/faulted_thread_queue/nacl.scons
++++ b/native_client/tests/faulted_thread_queue/nacl.scons
+@@ -1,4 +1,4 @@
+-#! -*- python -*-
++#!/usr/bin/env python3
+ # Copyright (c) 2012 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/ppapi/native_client/chrome_main.scons b/ppapi/native_client/chrome_main.scons
+index 88ed6231c5..4ade629e23 100644
+--- a/ppapi/native_client/chrome_main.scons
++++ b/ppapi/native_client/chrome_main.scons
+@@ -1,4 +1,4 @@
+-#! -*- python -*-
++#!/usr/bin/env python3
+ # Copyright (c) 2012 The Native Client Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/liblouis/src/python/examples/liblouisxslt.py b/third_party/liblouis/src/python/examples/liblouisxslt.py
+index 2f1267b57c..faed79e19c 100755
+--- a/third_party/liblouis/src/python/examples/liblouisxslt.py
++++ b/third_party/liblouis/src/python/examples/liblouisxslt.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python -u
++#!/usr/bin/env python3 -u
+ #
+ # liblouis Braille Translation and Back-Translation Library
+ 
+diff --git a/third_party/llvm/mlir/python/mlir/dialects/linalg/opdsl/dump_oplib.py b/third_party/llvm/mlir/python/mlir/dialects/linalg/opdsl/dump_oplib.py
+index bacc0c302c..3940eda477 100644
+--- a/third_party/llvm/mlir/python/mlir/dialects/linalg/opdsl/dump_oplib.py
++++ b/third_party/llvm/mlir/python/mlir/dialects/linalg/opdsl/dump_oplib.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/which python
++#!/usr/bin/env python3
+ # Command line tool to load an oplib module and dump all of the operations
+ # it contains in some format.
+ """Loads one or more modules containing op definitions and dumps them.
+diff --git a/third_party/webrtc/tools_webrtc/executable_host_build.py b/third_party/webrtc/tools_webrtc/executable_host_build.py
+index aac4be0b4b..62f69d6f9b 100644
+--- a/third_party/webrtc/tools_webrtc/executable_host_build.py
++++ b/third_party/webrtc/tools_webrtc/executable_host_build.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env/python
++#!/usr/bin/env python3
+ 
+ # Copyright (c) 2018 The WebRTC project authors. All Rights Reserved.
+ #
+diff --git a/v8/tools/ignition/linux_perf_report.py b/v8/tools/ignition/linux_perf_report.py
+index 268bed55b7..5e530fb0b5 100755
+--- a/v8/tools/ignition/linux_perf_report.py
++++ b/v8/tools/ignition/linux_perf_report.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python2
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 the V8 project authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be

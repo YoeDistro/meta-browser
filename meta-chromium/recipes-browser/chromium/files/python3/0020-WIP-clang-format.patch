@@ -1,0 +1,34 @@
+From 9897cd4b4da9fa78e3c3ec0283fb6690e273ffcb Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:51:03 +0200
+Subject: [PATCH] WIP: clang-format
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ buildtools/linux64/clang-format | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/buildtools/linux64/clang-format b/buildtools/linux64/clang-format
+index 7fb2b80b99..806b620bc4 100755
+--- a/buildtools/linux64/clang-format
++++ b/buildtools/linux64/clang-format
+@@ -12,7 +12,7 @@ inputfiles = [a for a in args if not a.startswith('-')]
+ 
+ contents = ''
+ if '-' in args or not inputfiles:
+-    contents = sys.stdin.read()
++    contents = sys.stdin.read().encode('utf-8')
+ 
+ # Tarball builds may or may not have depot_tools in $PATH. In the former case,
+ # running 'clang-format' will call back into this script infinitely. Strip off
+@@ -34,8 +34,8 @@ try:
+     stdout, stderr = proc.communicate(input=contents)
+     # Ignore if clang-format fails. Eg: it may be too old to support C++14.
+     if proc.returncode == 0:
+-        sys.stdout.write(stdout)
+-        sys.stderr.write(stderr)
++        sys.stdout.write(stdout.decode('utf-8'))
++        sys.stderr.write(stderr.decode('utf-8'))
+         sys.exit(0)
+ except OSError:
+     # Ignore if clang-format is not installed.

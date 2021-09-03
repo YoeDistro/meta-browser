@@ -1,0 +1,1681 @@
+From 6df92a09262493206d3707c483e08711238593a2 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:47 +0200
+Subject: [PATCH] python3: update shebangs '^#! /usr/bin/env python$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ build/android/method_count.py                                   | 2 +-
+ .../android/pylib/results/presentation/standard_gtest_merge.py  | 2 +-
+ third_party/afl/update.py                                       | 2 +-
+ .../src/tests/restricted_traces/restricted_trace_gold_tests.py  | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Build.py       | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/ConfigSet.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Configure.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Context.py     | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Errors.py      | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Logs.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Node.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Options.py     | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Runner.py      | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Scripting.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Task.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/TaskGen.py     | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/__init__.py      | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/ar.py    | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/asm.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/bison.py | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/c.py     | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/c_aliases.py     | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/c_config.py      | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/c_osx.py | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/c_preproc.py     | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/c_tests.py       | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/ccroot.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/clang.py | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/clangxx.py       | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/compiler_c.py    | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/compiler_cxx.py  | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/compiler_d.py    | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/compiler_fc.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/cs.py    | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/cxx.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/d.py     | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/d_config.py      | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/d_scan.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/dbus.py  | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/dmd.py   | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/errcheck.py      | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/fc.py    | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/fc_config.py     | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/fc_scan.py       | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/flex.py  | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/g95.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/gas.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/gcc.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/gdc.py   | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/gfortran.py      | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/glib2.py | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/gnu_dirs.py      | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/gxx.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/icc.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/icpc.py  | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/ifort.py | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/intltool.py      | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/irixcc.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/ldc2.py  | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/lua.py   | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/md5_tstamp.py    | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/msvc.py  | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/nasm.py  | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/nobuild.py       | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/perl.py  | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/python.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/ruby.py  | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/suncc.py | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/suncxx.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/tex.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/vala.py  | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/waf_unit_test.py | 2 +-
+ .../angle/third_party/glmark2/src/waflib/Tools/winres.py        | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/xlc.py   | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Tools/xlcxx.py | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/Utils.py       | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/__init__.py    | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/ansiterm.py    | 2 +-
+ .../angle/third_party/glmark2/src/waflib/extras/__init__.py     | 2 +-
+ .../angle/third_party/glmark2/src/waflib/extras/compat15.py     | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/fixpy2.py      | 2 +-
+ third_party/angle/third_party/glmark2/src/waflib/processor.py   | 2 +-
+ .../rapidjson/src/bin/jsonschema/bin/jsonschema_suite           | 2 +-
+ third_party/catapult/dependency_manager/bin/update              | 2 +-
+ third_party/catapult/devil/devil/android/apk_helper_test.py     | 2 +-
+ .../catapult/devil/devil/android/device_denylist_test.py        | 2 +-
+ third_party/catapult/devil/devil/android/device_errors_test.py  | 2 +-
+ third_party/catapult/devil/devil/android/tools/cpufreq.py       | 2 +-
+ third_party/catapult/devil/devil/utils/markdown.py              | 2 +-
+ third_party/catapult/devil/devil/utils/markdown_test.py         | 2 +-
+ third_party/catapult/devil/devil/utils/parallelizer_test.py     | 2 +-
+ third_party/catapult/devil/devil/utils/update_dependencies.py   | 2 +-
+ third_party/catapult/firefighter/bin/deploy                     | 2 +-
+ third_party/catapult/firefighter/bin/run                        | 2 +-
+ .../telemetry/third_party/pyfakefs/pyfakefs/all_tests.py        | 2 +-
+ .../telemetry/third_party/pyfakefs/pyfakefs/example_test.py     | 2 +-
+ .../third_party/pyfakefs/pyfakefs/fake_filesystem_glob_test.py  | 2 +-
+ .../pyfakefs/pyfakefs/fake_filesystem_shutil_test.py            | 2 +-
+ .../third_party/pyfakefs/pyfakefs/fake_filesystem_test.py       | 2 +-
+ .../pyfakefs/pyfakefs/fake_filesystem_unittest_test.py          | 2 +-
+ .../pyfakefs/pyfakefs/fake_filesystem_vs_real_test.py           | 2 +-
+ .../third_party/pyfakefs/pyfakefs/fake_tempfile_test.py         | 2 +-
+ .../catapult/telemetry/third_party/pyfakefs/pyfakefs/setup.py   | 2 +-
+ .../protobuf/google/protobuf/internal/_parameterized.py         | 2 +-
+ third_party/llvm/clang/www/make_cxx_dr_status                   | 2 +-
+ third_party/protobuf/examples/add_person.py                     | 2 +-
+ third_party/protobuf/examples/list_people.py                    | 2 +-
+ third_party/protobuf/python/compatibility_tests/v2.5.0/setup.py | 2 +-
+ .../protobuf/python/google/protobuf/internal/_parameterized.py  | 2 +-
+ .../python/google/protobuf/internal/descriptor_database_test.py | 2 +-
+ .../python/google/protobuf/internal/descriptor_pool_test.py     | 2 +-
+ .../protobuf/python/google/protobuf/internal/descriptor_test.py | 2 +-
+ .../protobuf/python/google/protobuf/internal/generator_test.py  | 2 +-
+ .../python/google/protobuf/internal/json_format_test.py         | 2 +-
+ .../protobuf/python/google/protobuf/internal/keywords_test.py   | 2 +-
+ .../python/google/protobuf/internal/message_factory_test.py     | 2 +-
+ .../protobuf/python/google/protobuf/internal/message_test.py    | 2 +-
+ .../python/google/protobuf/internal/proto_builder_test.py       | 2 +-
+ .../protobuf/python/google/protobuf/internal/reflection_test.py | 2 +-
+ .../python/google/protobuf/internal/service_reflection_test.py  | 2 +-
+ .../python/google/protobuf/internal/symbol_database_test.py     | 2 +-
+ .../python/google/protobuf/internal/text_encoding_test.py       | 2 +-
+ .../python/google/protobuf/internal/text_format_test.py         | 2 +-
+ .../python/google/protobuf/internal/unknown_fields_test.py      | 2 +-
+ .../python/google/protobuf/internal/well_known_types_test.py    | 2 +-
+ .../python/google/protobuf/internal/wire_format_test.py         | 2 +-
+ third_party/protobuf/python/setup.py                            | 2 +-
+ third_party/skia/bin/list-skia-bots                             | 2 +-
+ third_party/skia/experimental/tools/generate-unicode-test-txt   | 2 +-
+ third_party/skia/experimental/tools/gerrit_percent_encode       | 2 +-
+ third_party/skia/experimental/tools/get_examples.py             | 2 +-
+ third_party/skia/gn/checkpath.py                                | 2 +-
+ third_party/skia/gn/copy_git_directory.py                       | 2 +-
+ third_party/skia/gn/make_gm_gni.py                              | 2 +-
+ third_party/skia/tools/fiddle/make_all_examples_cpp.py          | 2 +-
+ third_party/skia/tools/skqp/create_apk.py                       | 2 +-
+ third_party/skia/tools/skqp/cut_release.py                      | 2 +-
+ third_party/skia/tools/skqp/download_model                      | 2 +-
+ third_party/skia/tools/skqp/download_model.py                   | 2 +-
+ .../skia/tools/skqp/find_commit_with_best_gold_results.py       | 2 +-
+ third_party/skia/tools/skqp/make_apk_list.py                    | 2 +-
+ third_party/skia/tools/skqp/make_universal_apk.py               | 2 +-
+ third_party/skia/tools/skqp/run_skqp_exe                        | 2 +-
+ third_party/skia/tools/skqp/setup_resources                     | 2 +-
+ third_party/webgl/src/conformance-suites/2.0.0/py/lint/lint.py  | 2 +-
+ tools/android/sdk_updater/update_sdk_tests.py                   | 2 +-
+ tools/clang/scripts/goma_ld.py                                  | 2 +-
+ tools/clang/scripts/goma_link.py                                | 2 +-
+ tools/json_schema_compiler/idl_schema.py                        | 2 +-
+ .../third_party/google/protobuf/internal/_parameterized.py      | 2 +-
+ 152 files changed, 152 insertions(+), 152 deletions(-)
+
+diff --git a/build/android/method_count.py b/build/android/method_count.py
+index a39a390cf8..26e776ffd0 100755
+--- a/build/android/method_count.py
++++ b/build/android/method_count.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/build/android/pylib/results/presentation/standard_gtest_merge.py b/build/android/pylib/results/presentation/standard_gtest_merge.py
+index 58a29366c4..0207ce893a 100755
+--- a/build/android/pylib/results/presentation/standard_gtest_merge.py
++++ b/build/android/pylib/results/presentation/standard_gtest_merge.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/afl/update.py b/third_party/afl/update.py
+index 186d946cbc..66419e7d7a 100755
+--- a/third_party/afl/update.py
++++ b/third_party/afl/update.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright (c) 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/angle/src/tests/restricted_traces/restricted_trace_gold_tests.py b/third_party/angle/src/tests/restricted_traces/restricted_trace_gold_tests.py
+index 34c8af628d..a6cdd39ea2 100755
+--- a/third_party/angle/src/tests/restricted_traces/restricted_trace_gold_tests.py
++++ b/third_party/angle/src/tests/restricted_traces/restricted_trace_gold_tests.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # [VPYTHON:BEGIN]
+ # wheel: <
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Build.py b/third_party/angle/third_party/glmark2/src/waflib/Build.py
+index b2ef897100..684c202963 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Build.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Build.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/ConfigSet.py b/third_party/angle/third_party/glmark2/src/waflib/ConfigSet.py
+index 16142a2ada..9db996cfa5 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/ConfigSet.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/ConfigSet.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Configure.py b/third_party/angle/third_party/glmark2/src/waflib/Configure.py
+index 170fd6cd80..5591a8b60c 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Configure.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Configure.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Context.py b/third_party/angle/third_party/glmark2/src/waflib/Context.py
+index 8f2cbfb67f..ac39809ce3 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Context.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Context.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Errors.py b/third_party/angle/third_party/glmark2/src/waflib/Errors.py
+index 3d98c8d2e5..7ed5d7a631 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Errors.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Errors.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Logs.py b/third_party/angle/third_party/glmark2/src/waflib/Logs.py
+index a4af69a01f..119bf2ef26 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Logs.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Logs.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Node.py b/third_party/angle/third_party/glmark2/src/waflib/Node.py
+index 240a80ecc4..4114e301f2 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Node.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Node.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Options.py b/third_party/angle/third_party/glmark2/src/waflib/Options.py
+index 1921317fde..8d8d5574a7 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Options.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Options.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Runner.py b/third_party/angle/third_party/glmark2/src/waflib/Runner.py
+index 110505e40a..e1045d5ba1 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Runner.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Runner.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Scripting.py b/third_party/angle/third_party/glmark2/src/waflib/Scripting.py
+index 994f8053f9..a122c0f164 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Scripting.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Scripting.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Task.py b/third_party/angle/third_party/glmark2/src/waflib/Task.py
+index b0c738f92b..f0b56dbc2a 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Task.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Task.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/TaskGen.py b/third_party/angle/third_party/glmark2/src/waflib/TaskGen.py
+index 09c574622b..676aac6a89 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/TaskGen.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/TaskGen.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/__init__.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/__init__.py
+index 55e850d6fe..35cb38bf34 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/__init__.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/__init__.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/ar.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/ar.py
+index 5921ce1a50..1e4ff9fbee 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/ar.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/ar.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/asm.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/asm.py
+index d6a6d454f5..3da35a8b72 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/asm.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/asm.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/bison.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/bison.py
+index 146921fb82..8d2e38e2e8 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/bison.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/bison.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/c.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/c.py
+index 7c794f1506..527f99b1ec 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/c.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/c.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_aliases.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_aliases.py
+index b1c1031447..7b165175af 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_aliases.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_aliases.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
+index 9c627c1cf6..a27257ddac 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_osx.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_osx.py
+index a378582c8c..85dc62d172 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_osx.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_osx.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_preproc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_preproc.py
+index 65d675cb8d..14ebd74d61 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_preproc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_preproc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_tests.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_tests.py
+index 1bf3a0c1cd..83c6ef3545 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/c_tests.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/c_tests.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/ccroot.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/ccroot.py
+index e3f69d012f..ce42540e3f 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/ccroot.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/ccroot.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/clang.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/clang.py
+index 9379f5a459..1a19d0f3ac 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/clang.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/clang.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/clangxx.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/clangxx.py
+index fc97135e80..70aa7cc1ca 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/clangxx.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/clangxx.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_c.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_c.py
+index ee607bef10..21576d657d 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_c.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_c.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_cxx.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_cxx.py
+index cbd267fc8b..982aecf067 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_cxx.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_cxx.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_d.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_d.py
+index 2ca7e26646..b76fddec98 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_d.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_d.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_fc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_fc.py
+index 8b23a2bcf3..3367efe507 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_fc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/compiler_fc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/cs.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/cs.py
+index d401c14843..18e984d4ad 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/cs.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/cs.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/cxx.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/cxx.py
+index e63ad8b61d..673535a1b6 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/cxx.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/cxx.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/d.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/d.py
+index 6d1c3c6e8c..a1bbb59cc9 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/d.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/d.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/d_config.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/d_config.py
+index 3b4bdf0a12..5c8219c09a 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/d_config.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/d_config.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/d_scan.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/d_scan.py
+index 1abcfbb124..d05ff47325 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/d_scan.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/d_scan.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/dbus.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/dbus.py
+index 9ce00d13ba..32a2da9347 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/dbus.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/dbus.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/dmd.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/dmd.py
+index 2711628d31..b742cdda16 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/dmd.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/dmd.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/errcheck.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/errcheck.py
+index 8c062abc22..efc58b8dcb 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/errcheck.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/errcheck.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/fc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/fc.py
+index 787961523b..bfcb3ed0c2 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/fc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/fc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/fc_config.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/fc_config.py
+index ea24691821..8e5181cb92 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/fc_config.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/fc_config.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/fc_scan.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/fc_scan.py
+index c07a22da80..92c21777b1 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/fc_scan.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/fc_scan.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/flex.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/flex.py
+index 39123348ef..b2e4449bae 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/flex.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/flex.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/g95.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/g95.py
+index b62adcd33c..5fdf5a77bb 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/g95.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/g95.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/gas.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/gas.py
+index 4817c23144..d1a6c9dbbb 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/gas.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/gas.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/gcc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/gcc.py
+index aca8724545..7994615a43 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/gcc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/gcc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/gdc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/gdc.py
+index c8099302d3..4da8214fe4 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/gdc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/gdc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/gfortran.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/gfortran.py
+index 2cd464c3ea..e6f6d81d16 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/gfortran.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/gfortran.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/glib2.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/glib2.py
+index c1f6445821..6c5b181768 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/glib2.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/glib2.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/gnu_dirs.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/gnu_dirs.py
+index 21a628853a..5f838e7140 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/gnu_dirs.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/gnu_dirs.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/gxx.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/gxx.py
+index 8e161f8acd..32bfca28b1 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/gxx.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/gxx.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/icc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/icc.py
+index bffd7d1cdb..6bb6e4fa83 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/icc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/icc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/icpc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/icpc.py
+index f7bdb0ffc9..2b27c7f669 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/icpc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/icpc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/ifort.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/ifort.py
+index ede74c44e1..1ddca9f383 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/ifort.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/ifort.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/intltool.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/intltool.py
+index 4666e8f7b8..330b5dc937 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/intltool.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/intltool.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/irixcc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/irixcc.py
+index ea2a109ead..6201188336 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/irixcc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/irixcc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
+index a07c7c5d61..74926f2dee 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/ldc2.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/ldc2.py
+index 40d435e7b7..5fb21d1ba0 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/ldc2.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/ldc2.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/lua.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/lua.py
+index 7c6a682159..c579150b4f 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/lua.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/lua.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/md5_tstamp.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/md5_tstamp.py
+index 29522311b1..95354294d2 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/md5_tstamp.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/md5_tstamp.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/msvc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/msvc.py
+index 65fdef6fc0..39a890af88 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/msvc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/msvc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/nasm.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/nasm.py
+index a107298d4a..9d8c439dbb 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/nasm.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/nasm.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/nobuild.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/nobuild.py
+index beb2217949..aa55c7de73 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/nobuild.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/nobuild.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/perl.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/perl.py
+index 8cc992c27c..bfcc5c3c5e 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/perl.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/perl.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/python.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/python.py
+index 8fc55d1019..97f6e73923 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/python.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/python.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py
+index 4cac93260e..0fafe9d874 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/ruby.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/ruby.py
+index 639ec76cb7..fa3bab85fb 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/ruby.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/ruby.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/suncc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/suncc.py
+index 7dd94010e6..a0ac2e66b8 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/suncc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/suncc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/suncxx.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/suncxx.py
+index 71f59d1e9c..187cd5a137 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/suncxx.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/suncxx.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/tex.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/tex.py
+index 032623455b..dda2f1f40a 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/tex.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/tex.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/vala.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/vala.py
+index 75f87854b3..5f7846254e 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/vala.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/vala.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/waf_unit_test.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/waf_unit_test.py
+index 8d10ec02e3..0bd3c5d2d3 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/waf_unit_test.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/waf_unit_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/winres.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/winres.py
+index 783d8224a5..edbe7056a8 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/winres.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/winres.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/xlc.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/xlc.py
+index a86010d9fb..af1c99c3df 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/xlc.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/xlc.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Tools/xlcxx.py b/third_party/angle/third_party/glmark2/src/waflib/Tools/xlcxx.py
+index 8a081b64fa..b91dcc1329 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Tools/xlcxx.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Tools/xlcxx.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/Utils.py b/third_party/angle/third_party/glmark2/src/waflib/Utils.py
+index 0cbf515766..f27d00d216 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/Utils.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/Utils.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/__init__.py b/third_party/angle/third_party/glmark2/src/waflib/__init__.py
+index 55e850d6fe..35cb38bf34 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/__init__.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/__init__.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/ansiterm.py b/third_party/angle/third_party/glmark2/src/waflib/ansiterm.py
+index 1d8bc78f16..e44b2b9206 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/ansiterm.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/ansiterm.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/extras/__init__.py b/third_party/angle/third_party/glmark2/src/waflib/extras/__init__.py
+index 55e850d6fe..35cb38bf34 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/extras/__init__.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/extras/__init__.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/extras/compat15.py b/third_party/angle/third_party/glmark2/src/waflib/extras/compat15.py
+index 4830d92f3f..668b9ba013 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/extras/compat15.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/extras/compat15.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/fixpy2.py b/third_party/angle/third_party/glmark2/src/waflib/fixpy2.py
+index 9c259d4463..840246555a 100644
+--- a/third_party/angle/third_party/glmark2/src/waflib/fixpy2.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/fixpy2.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/glmark2/src/waflib/processor.py b/third_party/angle/third_party/glmark2/src/waflib/processor.py
+index a4a4a34307..8f72521f7d 100755
+--- a/third_party/angle/third_party/glmark2/src/waflib/processor.py
++++ b/third_party/angle/third_party/glmark2/src/waflib/processor.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # encoding: utf-8
+ # WARNING! Do not edit! https://waf.io/book/index.html#_obtaining_the_waf_file
+ 
+diff --git a/third_party/angle/third_party/rapidjson/src/bin/jsonschema/bin/jsonschema_suite b/third_party/angle/third_party/rapidjson/src/bin/jsonschema/bin/jsonschema_suite
+index 96108c86ba..31bd7f447f 100755
+--- a/third_party/angle/third_party/rapidjson/src/bin/jsonschema/bin/jsonschema_suite
++++ b/third_party/angle/third_party/rapidjson/src/bin/jsonschema/bin/jsonschema_suite
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ from __future__ import print_function
+ import sys
+ import textwrap
+diff --git a/third_party/catapult/dependency_manager/bin/update b/third_party/catapult/dependency_manager/bin/update
+index c2ca1df6dd..54f85cefb8 100755
+--- a/third_party/catapult/dependency_manager/bin/update
++++ b/third_party/catapult/dependency_manager/bin/update
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/devil/devil/android/apk_helper_test.py b/third_party/catapult/devil/devil/android/apk_helper_test.py
+index 6ac7fde26d..cccae2103e 100755
+--- a/third_party/catapult/devil/devil/android/apk_helper_test.py
++++ b/third_party/catapult/devil/devil/android/apk_helper_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2017 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/devil/devil/android/device_denylist_test.py b/third_party/catapult/devil/devil/android/device_denylist_test.py
+index b5d79e83e6..97f8ceac5a 100644
+--- a/third_party/catapult/devil/devil/android/device_denylist_test.py
++++ b/third_party/catapult/devil/devil/android/device_denylist_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/devil/devil/android/device_errors_test.py b/third_party/catapult/devil/devil/android/device_errors_test.py
+index 5fc9e2542c..16ed5348d1 100755
+--- a/third_party/catapult/devil/devil/android/device_errors_test.py
++++ b/third_party/catapult/devil/devil/android/device_errors_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2017 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/devil/devil/android/tools/cpufreq.py b/third_party/catapult/devil/devil/android/tools/cpufreq.py
+index c8753fa386..3c68150bc7 100755
+--- a/third_party/catapult/devil/devil/android/tools/cpufreq.py
++++ b/third_party/catapult/devil/devil/android/tools/cpufreq.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/devil/devil/utils/markdown.py b/third_party/catapult/devil/devil/utils/markdown.py
+index bb21701265..20ef233efa 100755
+--- a/third_party/catapult/devil/devil/utils/markdown.py
++++ b/third_party/catapult/devil/devil/utils/markdown.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/devil/devil/utils/markdown_test.py b/third_party/catapult/devil/devil/utils/markdown_test.py
+index 11cd46eabe..5b10465982 100755
+--- a/third_party/catapult/devil/devil/utils/markdown_test.py
++++ b/third_party/catapult/devil/devil/utils/markdown_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2017 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/devil/devil/utils/parallelizer_test.py b/third_party/catapult/devil/devil/utils/parallelizer_test.py
+index 2d8f72aaad..1a9573524b 100644
+--- a/third_party/catapult/devil/devil/utils/parallelizer_test.py
++++ b/third_party/catapult/devil/devil/utils/parallelizer_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2014 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/devil/devil/utils/update_dependencies.py b/third_party/catapult/devil/devil/utils/update_dependencies.py
+index 8eccf1bb38..839bd406fd 100755
+--- a/third_party/catapult/devil/devil/utils/update_dependencies.py
++++ b/third_party/catapult/devil/devil/utils/update_dependencies.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/firefighter/bin/deploy b/third_party/catapult/firefighter/bin/deploy
+index 1f968c49d8..8948f028fe 100755
+--- a/third_party/catapult/firefighter/bin/deploy
++++ b/third_party/catapult/firefighter/bin/deploy
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/firefighter/bin/run b/third_party/catapult/firefighter/bin/run
+index 61da778aa4..4b50e96f11 100755
+--- a/third_party/catapult/firefighter/bin/run
++++ b/third_party/catapult/firefighter/bin/run
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/all_tests.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/all_tests.py
+index 0838d5fde3..1454221a53 100755
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/all_tests.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/all_tests.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2009 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/example_test.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/example_test.py
+index 4d8a21ecd7..b674d09ac4 100644
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/example_test.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/example_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2014 Altera Corporation. All Rights Reserved.
+ # Author: John McGehee
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_glob_test.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_glob_test.py
+index 66eba6aee7..2f04caaf31 100755
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_glob_test.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_glob_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2009 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_shutil_test.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_shutil_test.py
+index d2f07095d2..be32f295f5 100755
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_shutil_test.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_shutil_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2009 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_test.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_test.py
+index d3d15d1a20..dddaaf9fee 100644
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_test.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2009 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_unittest_test.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_unittest_test.py
+index 92321fae21..f3b4fa9731 100644
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_unittest_test.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_unittest_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2014 Altera Corporation. All Rights Reserved.
+ # Author: John McGehee
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_vs_real_test.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_vs_real_test.py
+index 6c2fe387ef..b18fcc4a65 100755
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_vs_real_test.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_filesystem_vs_real_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2009 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_tempfile_test.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_tempfile_test.py
+index 966d9f4529..7737db0613 100755
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_tempfile_test.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/fake_tempfile_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2009 Google Inc. All Rights Reserved.
+ #
+diff --git a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/setup.py b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/setup.py
+index e69ee21cdf..d6dcadb970 100644
+--- a/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/setup.py
++++ b/third_party/catapult/telemetry/third_party/pyfakefs/pyfakefs/setup.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Copyright 2009 Google Inc. All Rights Reserved.
+ # Copyright 2014 Altera Corporation. All Rights Reserved.
+diff --git a/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/protobuf/google/protobuf/internal/_parameterized.py b/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/protobuf/google/protobuf/internal/_parameterized.py
+index f2c0b305b9..45ca4d2388 100644
+--- a/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/protobuf/google/protobuf/internal/_parameterized.py
++++ b/third_party/catapult/third_party/gae_ts_mon/gae_ts_mon/protobuf/google/protobuf/internal/_parameterized.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/llvm/clang/www/make_cxx_dr_status b/third_party/llvm/clang/www/make_cxx_dr_status
+index ee113779e3..5480ff3de9 100755
+--- a/third_party/llvm/clang/www/make_cxx_dr_status
++++ b/third_party/llvm/clang/www/make_cxx_dr_status
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ import sys, os, re
+ 
+ index = 'cwg_index.html'
+diff --git a/third_party/protobuf/examples/add_person.py b/third_party/protobuf/examples/add_person.py
+index aa0fbca737..f1874a1943 100755
+--- a/third_party/protobuf/examples/add_person.py
++++ b/third_party/protobuf/examples/add_person.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # See README.txt for information and build instructions.
+ 
+diff --git a/third_party/protobuf/examples/list_people.py b/third_party/protobuf/examples/list_people.py
+index d2c294c6f5..915015f7d4 100755
+--- a/third_party/protobuf/examples/list_people.py
++++ b/third_party/protobuf/examples/list_people.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # See README.txt for information and build instructions.
+ 
+diff --git a/third_party/protobuf/python/compatibility_tests/v2.5.0/setup.py b/third_party/protobuf/python/compatibility_tests/v2.5.0/setup.py
+index bf67536733..e0034e9252 100755
+--- a/third_party/protobuf/python/compatibility_tests/v2.5.0/setup.py
++++ b/third_party/protobuf/python/compatibility_tests/v2.5.0/setup.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ import glob
+ import os
+diff --git a/third_party/protobuf/python/google/protobuf/internal/_parameterized.py b/third_party/protobuf/python/google/protobuf/internal/_parameterized.py
+index 4cba1d479d..81299dd4c8 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/_parameterized.py
++++ b/third_party/protobuf/python/google/protobuf/internal/_parameterized.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/descriptor_database_test.py b/third_party/protobuf/python/google/protobuf/internal/descriptor_database_test.py
+index 619779a5dd..f3abc5c6d7 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/descriptor_database_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/descriptor_database_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/descriptor_pool_test.py b/third_party/protobuf/python/google/protobuf/internal/descriptor_pool_test.py
+index fed82bfc7a..9cc551310c 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/descriptor_pool_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/descriptor_pool_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/descriptor_test.py b/third_party/protobuf/python/google/protobuf/internal/descriptor_test.py
+index 5e3b0a9b4c..ab48c14403 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/descriptor_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/descriptor_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/generator_test.py b/third_party/protobuf/python/google/protobuf/internal/generator_test.py
+index ab16d175d2..cd87966258 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/generator_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/generator_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/json_format_test.py b/third_party/protobuf/python/google/protobuf/internal/json_format_test.py
+index 4310115a40..1e8120efb4 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/json_format_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/json_format_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/keywords_test.py b/third_party/protobuf/python/google/protobuf/internal/keywords_test.py
+index 87449280a7..e95ae2b4a6 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/keywords_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/keywords_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/message_factory_test.py b/third_party/protobuf/python/google/protobuf/internal/message_factory_test.py
+index 24b79ecc9e..7fed4469e9 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/message_factory_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/message_factory_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/message_test.py b/third_party/protobuf/python/google/protobuf/internal/message_test.py
+index a4d62a85b1..640363454c 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/message_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/message_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # -*- coding: utf-8 -*-
+ #
+ # Protocol Buffers - Google's data interchange format
+diff --git a/third_party/protobuf/python/google/protobuf/internal/proto_builder_test.py b/third_party/protobuf/python/google/protobuf/internal/proto_builder_test.py
+index 36dfbfded8..4899e41b99 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/proto_builder_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/proto_builder_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/reflection_test.py b/third_party/protobuf/python/google/protobuf/internal/reflection_test.py
+index e052776d63..a1b97acdb5 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/reflection_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/reflection_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # -*- coding: utf-8 -*-
+ #
+ # Protocol Buffers - Google's data interchange format
+diff --git a/third_party/protobuf/python/google/protobuf/internal/service_reflection_test.py b/third_party/protobuf/python/google/protobuf/internal/service_reflection_test.py
+index 77239f4462..29b294be67 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/service_reflection_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/service_reflection_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/symbol_database_test.py b/third_party/protobuf/python/google/protobuf/internal/symbol_database_test.py
+index af42681ae2..6885791ac9 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/symbol_database_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/symbol_database_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/text_encoding_test.py b/third_party/protobuf/python/google/protobuf/internal/text_encoding_test.py
+index c7d182c444..08b92d8999 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/text_encoding_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/text_encoding_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/text_format_test.py b/third_party/protobuf/python/google/protobuf/internal/text_format_test.py
+index 987116a106..12f1c63ceb 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/text_format_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/text_format_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # -*- coding: utf-8 -*-
+ #
+ # Protocol Buffers - Google's data interchange format
+diff --git a/third_party/protobuf/python/google/protobuf/internal/unknown_fields_test.py b/third_party/protobuf/python/google/protobuf/internal/unknown_fields_test.py
+index 277603d952..c5fcebfc75 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/unknown_fields_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/unknown_fields_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # -*- coding: utf-8 -*-
+ #
+ # Protocol Buffers - Google's data interchange format
+diff --git a/third_party/protobuf/python/google/protobuf/internal/well_known_types_test.py b/third_party/protobuf/python/google/protobuf/internal/well_known_types_test.py
+index 8089f035c6..cb70218b12 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/well_known_types_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/well_known_types_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/google/protobuf/internal/wire_format_test.py b/third_party/protobuf/python/google/protobuf/internal/wire_format_test.py
+index da120f3361..06d140ec6f 100755
+--- a/third_party/protobuf/python/google/protobuf/internal/wire_format_test.py
++++ b/third_party/protobuf/python/google/protobuf/internal/wire_format_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/setup.py b/third_party/protobuf/python/setup.py
+index d003c969ab..6c3e14bf41 100755
+--- a/third_party/protobuf/python/setup.py
++++ b/third_party/protobuf/python/setup.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # See README for usage instructions.
+ from distutils import util
+diff --git a/third_party/skia/bin/list-skia-bots b/third_party/skia/bin/list-skia-bots
+index 09fbc22225..68f431aa3e 100755
+--- a/third_party/skia/bin/list-skia-bots
++++ b/third_party/skia/bin/list-skia-bots
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Copyright 2017 Google Inc.
+ #
+diff --git a/third_party/skia/experimental/tools/generate-unicode-test-txt b/third_party/skia/experimental/tools/generate-unicode-test-txt
+index 944da3156e..19ea21a6f2 100755
+--- a/third_party/skia/experimental/tools/generate-unicode-test-txt
++++ b/third_party/skia/experimental/tools/generate-unicode-test-txt
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Copyright 2016 Google Inc.
+ #
+diff --git a/third_party/skia/experimental/tools/gerrit_percent_encode b/third_party/skia/experimental/tools/gerrit_percent_encode
+index f850c088e7..4f19e55268 100755
+--- a/third_party/skia/experimental/tools/gerrit_percent_encode
++++ b/third_party/skia/experimental/tools/gerrit_percent_encode
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2019 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/experimental/tools/get_examples.py b/third_party/skia/experimental/tools/get_examples.py
+index a2a17e8912..c46b04aaf1 100755
+--- a/third_party/skia/experimental/tools/get_examples.py
++++ b/third_party/skia/experimental/tools/get_examples.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2020 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/gn/checkpath.py b/third_party/skia/gn/checkpath.py
+index 0402b2c591..10ddf4a4de 100755
+--- a/third_party/skia/gn/checkpath.py
++++ b/third_party/skia/gn/checkpath.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2019 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/gn/copy_git_directory.py b/third_party/skia/gn/copy_git_directory.py
+index 04623baf50..976c98ef0a 100755
+--- a/third_party/skia/gn/copy_git_directory.py
++++ b/third_party/skia/gn/copy_git_directory.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2019 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/gn/make_gm_gni.py b/third_party/skia/gn/make_gm_gni.py
+index 77bfb8e017..5a431ce25d 100755
+--- a/third_party/skia/gn/make_gm_gni.py
++++ b/third_party/skia/gn/make_gm_gni.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2019 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/tools/fiddle/make_all_examples_cpp.py b/third_party/skia/tools/fiddle/make_all_examples_cpp.py
+index 4c8dcd2067..3a6b3c09d4 100755
+--- a/third_party/skia/tools/fiddle/make_all_examples_cpp.py
++++ b/third_party/skia/tools/fiddle/make_all_examples_cpp.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2019 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/tools/skqp/create_apk.py b/third_party/skia/tools/skqp/create_apk.py
+index 27bff792fb..518b01ef61 100755
+--- a/third_party/skia/tools/skqp/create_apk.py
++++ b/third_party/skia/tools/skqp/create_apk.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2019 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/tools/skqp/cut_release.py b/third_party/skia/tools/skqp/cut_release.py
+index 584f1b5414..084bf87aa2 100755
+--- a/third_party/skia/tools/skqp/cut_release.py
++++ b/third_party/skia/tools/skqp/cut_release.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2018 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+ 
+diff --git a/third_party/skia/tools/skqp/download_model b/third_party/skia/tools/skqp/download_model
+index 68ef50daae..bd56798c08 100755
+--- a/third_party/skia/tools/skqp/download_model
++++ b/third_party/skia/tools/skqp/download_model
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2019 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/tools/skqp/download_model.py b/third_party/skia/tools/skqp/download_model.py
+index fb0020e481..4a0c16c3d3 100755
+--- a/third_party/skia/tools/skqp/download_model.py
++++ b/third_party/skia/tools/skqp/download_model.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Copyright 2018 Google Inc.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/skia/tools/skqp/find_commit_with_best_gold_results.py b/third_party/skia/tools/skqp/find_commit_with_best_gold_results.py
+index d825b1ace8..f0a23b7501 100755
+--- a/third_party/skia/tools/skqp/find_commit_with_best_gold_results.py
++++ b/third_party/skia/tools/skqp/find_commit_with_best_gold_results.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2019 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/tools/skqp/make_apk_list.py b/third_party/skia/tools/skqp/make_apk_list.py
+index 32c9847499..239a37e1ed 100755
+--- a/third_party/skia/tools/skqp/make_apk_list.py
++++ b/third_party/skia/tools/skqp/make_apk_list.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Copyright 2018 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/skia/tools/skqp/make_universal_apk.py b/third_party/skia/tools/skqp/make_universal_apk.py
+index bbddeb10b8..dc11d96129 100755
+--- a/third_party/skia/tools/skqp/make_universal_apk.py
++++ b/third_party/skia/tools/skqp/make_universal_apk.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright 2018 Google LLC.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/skia/tools/skqp/run_skqp_exe b/third_party/skia/tools/skqp/run_skqp_exe
+index bebce5ff80..5c1a3add77 100755
+--- a/third_party/skia/tools/skqp/run_skqp_exe
++++ b/third_party/skia/tools/skqp/run_skqp_exe
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Copyright 2018 Google Inc.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/skia/tools/skqp/setup_resources b/third_party/skia/tools/skqp/setup_resources
+index 22f27a85dd..4f049a4016 100755
+--- a/third_party/skia/tools/skqp/setup_resources
++++ b/third_party/skia/tools/skqp/setup_resources
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Copyright 2018 Google Inc.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/webgl/src/conformance-suites/2.0.0/py/lint/lint.py b/third_party/webgl/src/conformance-suites/2.0.0/py/lint/lint.py
+index 6f824616e9..090ab0afc8 100755
+--- a/third_party/webgl/src/conformance-suites/2.0.0/py/lint/lint.py
++++ b/third_party/webgl/src/conformance-suites/2.0.0/py/lint/lint.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ import os
+ import subprocess
+ import re
+diff --git a/tools/android/sdk_updater/update_sdk_tests.py b/tools/android/sdk_updater/update_sdk_tests.py
+index f2e830976d..f5caca85a6 100755
+--- a/tools/android/sdk_updater/update_sdk_tests.py
++++ b/tools/android/sdk_updater/update_sdk_tests.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Copyright 2018 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/tools/clang/scripts/goma_ld.py b/tools/clang/scripts/goma_ld.py
+index 21a7dd2286..832422052e 100755
+--- a/tools/clang/scripts/goma_ld.py
++++ b/tools/clang/scripts/goma_ld.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright (c) 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/tools/clang/scripts/goma_link.py b/tools/clang/scripts/goma_link.py
+index 9beecb30bb..b6e1d8593f 100755
+--- a/tools/clang/scripts/goma_link.py
++++ b/tools/clang/scripts/goma_link.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright (c) 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/tools/json_schema_compiler/idl_schema.py b/tools/json_schema_compiler/idl_schema.py
+index 1ab54c860b..029e83c717 100755
+--- a/tools/json_schema_compiler/idl_schema.py
++++ b/tools/json_schema_compiler/idl_schema.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ # Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/tools/swarming_client/third_party/google/protobuf/internal/_parameterized.py b/tools/swarming_client/third_party/google/protobuf/internal/_parameterized.py
+index 4cba1d479d..81299dd4c8 100644
+--- a/tools/swarming_client/third_party/google/protobuf/internal/_parameterized.py
++++ b/tools/swarming_client/third_party/google/protobuf/internal/_parameterized.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.

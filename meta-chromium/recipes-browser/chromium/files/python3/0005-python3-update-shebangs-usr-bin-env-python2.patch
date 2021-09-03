@@ -1,0 +1,31 @@
+From 393a842b9751bbb0b009313b0b7cd39c6b663de2 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:48 +0200
+Subject: [PATCH] python3: update shebangs '^#! /usr/bin/env python2$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ third_party/skia/bin/sysopen                                    | 2 +-
+ .../src/sdk/tests/conformance/ogles/process-ogles2-tests.py     | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/third_party/skia/bin/sysopen b/third_party/skia/bin/sysopen
+index 84100c2187..bc9e42d588 100755
+--- a/third_party/skia/bin/sysopen
++++ b/third_party/skia/bin/sysopen
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python2
++#!/usr/bin/env python3
+ # Copyright 2017 Google Inc.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/webgl/src/sdk/tests/conformance/ogles/process-ogles2-tests.py b/third_party/webgl/src/sdk/tests/conformance/ogles/process-ogles2-tests.py
+index 49d9f874d9..d77ea7aaa2 100644
+--- a/third_party/webgl/src/sdk/tests/conformance/ogles/process-ogles2-tests.py
++++ b/third_party/webgl/src/sdk/tests/conformance/ogles/process-ogles2-tests.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python2
++#!/usr/bin/env python3
+ 
+ """generates tests from OpenGL ES 2.0 .run/.test files."""
+ 

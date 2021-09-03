@@ -1,0 +1,130 @@
+From de3f8b7fed9a59c69f94c920785d3994b7b3c3d2 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:50 +0200
+Subject: [PATCH] python3: update shebangs '^#! /usr/bin/python$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ third_party/angle/src/libANGLE/gen_overlay_widgets.py           | 2 +-
+ third_party/protobuf/objectivec/DevTools/pddm.py                | 2 +-
+ third_party/protobuf/objectivec/DevTools/pddm_tests.py          | 2 +-
+ .../v2.5.0/tests/google/protobuf/internal/descriptor_test.py    | 2 +-
+ .../v2.5.0/tests/google/protobuf/internal/generator_test.py     | 2 +-
+ .../v2.5.0/tests/google/protobuf/internal/message_test.py       | 2 +-
+ .../tests/google/protobuf/internal/service_reflection_test.py   | 2 +-
+ .../v2.5.0/tests/google/protobuf/internal/text_format_test.py   | 2 +-
+ .../v2.5.0/tests/google/protobuf/internal/wire_format_test.py   | 2 +-
+ v8/tools/ignition/bytecode_dispatches_report.py                 | 2 +-
+ v8/tools/ignition/linux_perf_bytecode_annotate.py               | 2 +-
+ 11 files changed, 11 insertions(+), 11 deletions(-)
+
+diff --git a/third_party/angle/src/libANGLE/gen_overlay_widgets.py b/third_party/angle/src/libANGLE/gen_overlay_widgets.py
+index 23a5b29549..b704aee93b 100644
+--- a/third_party/angle/src/libANGLE/gen_overlay_widgets.py
++++ b/third_party/angle/src/libANGLE/gen_overlay_widgets.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ 
+ # Copyright 2019 The ANGLE Project Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/protobuf/objectivec/DevTools/pddm.py b/third_party/protobuf/objectivec/DevTools/pddm.py
+index b572cc75b6..fffe2489fc 100755
+--- a/third_party/protobuf/objectivec/DevTools/pddm.py
++++ b/third_party/protobuf/objectivec/DevTools/pddm.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2015 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/objectivec/DevTools/pddm_tests.py b/third_party/protobuf/objectivec/DevTools/pddm_tests.py
+index 81842090cc..fab61bc85c 100755
+--- a/third_party/protobuf/objectivec/DevTools/pddm_tests.py
++++ b/third_party/protobuf/objectivec/DevTools/pddm_tests.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2015 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/descriptor_test.py b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/descriptor_test.py
+index c74f882e78..6b441fea04 100755
+--- a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/descriptor_test.py
++++ b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/descriptor_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/generator_test.py b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/generator_test.py
+index feb7752c5c..201d9b9b1c 100755
+--- a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/generator_test.py
++++ b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/generator_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/message_test.py b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/message_test.py
+index e71b295bb6..baa2937bdc 100755
+--- a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/message_test.py
++++ b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/message_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/service_reflection_test.py b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/service_reflection_test.py
+index 9b7356ffa8..a0ad3bb540 100755
+--- a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/service_reflection_test.py
++++ b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/service_reflection_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/text_format_test.py b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/text_format_test.py
+index 0bee668a3e..95c4d52395 100755
+--- a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/text_format_test.py
++++ b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/text_format_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/wire_format_test.py b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/wire_format_test.py
+index 7600778603..c9b0f4a1fb 100755
+--- a/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/wire_format_test.py
++++ b/third_party/protobuf/python/compatibility_tests/v2.5.0/tests/google/protobuf/internal/wire_format_test.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Protocol Buffers - Google's data interchange format
+ # Copyright 2008 Google Inc.  All rights reserved.
+diff --git a/v8/tools/ignition/bytecode_dispatches_report.py b/v8/tools/ignition/bytecode_dispatches_report.py
+index aa5a9c9e59..5e6f43514f 100755
+--- a/v8/tools/ignition/bytecode_dispatches_report.py
++++ b/v8/tools/ignition/bytecode_dispatches_report.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 the V8 project authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/v8/tools/ignition/linux_perf_bytecode_annotate.py b/v8/tools/ignition/linux_perf_bytecode_annotate.py
+index 96cb0ee0fd..9517c7c5d5 100755
+--- a/v8/tools/ignition/linux_perf_bytecode_annotate.py
++++ b/v8/tools/ignition/linux_perf_bytecode_annotate.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#!/usr/bin/env python3
+ #
+ # Copyright 2016 the V8 project authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be

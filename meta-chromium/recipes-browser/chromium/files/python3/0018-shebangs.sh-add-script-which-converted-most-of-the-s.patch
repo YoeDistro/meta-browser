@@ -1,0 +1,72 @@
+From a6cd62d1ddf79df4cb704f594c561b03a65c9c75 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:20:44 +0200
+Subject: [PATCH] shebangs.sh: add script which converted most of the shebangs
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ shebangs.sh | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
+ create mode 100755 shebangs.sh
+
+diff --git a/shebangs.sh b/shebangs.sh
+new file mode 100755
+index 0000000000..18bb011e62
+--- /dev/null
++++ b/shebangs.sh
+@@ -0,0 +1,55 @@
++#!/bin/bash
++
++git grep "^#!" > shebangs.txt
++
++for sb in \
++  '#!/usr/bin/env python$' \
++  '#!/usr/bin/env python2$' \
++  '#!/usr/bin/env python2.7$' \
++  '#! /usr/bin/env python$' \
++  '#! /usr/bin/env python2$' \
++  '#!/usr/bin/python2.4$' \
++  '#!/usr/bin/python3$' \
++  '#!/usr/bin/python$' \
++  '#!/usr/bin/python2$' \
++  '#! /usr/bin/python$' \
++  '#! python$' \
++  '#!/usr/bin env python$' \
++  ; do
++    echo "Shebang: $sb"
++    grep -c ":$sb" shebangs.txt
++    ## ! in "" trips sed
++    sed -i "s@^$sb@#\!/usr/bin/env python3@g" `grep ":$sb" shebangs.txt | sed 's/:.*//g' | sort -u`
++    git commit -a -s -m "python3: update shebangs '^$sb'"
++done
++
++sb='#!/usr/bin/python -u$'
++echo "Shebang: $sb"
++grep -c ":$sb" shebangs.txt
++## ! in "" trips sed
++sed -i "s@^$sb@#\!/usr/bin/env python3 -u@g" `grep ":$sb" shebangs.txt | sed 's/:.*//g' | sort -u`
++git commit -a -s -m "python3: update shebangs '^$sb'"
++
++sb='#!/usr/bin/python3 -i$'
++echo "Shebang: $sb"
++grep -c ":$sb" shebangs.txt
++## ! in "" trips sed
++sed -i "s@^$sb@#\!/usr/bin/env python3 -i@g" `grep ":$sb" shebangs.txt | sed 's/:.*//g' | sort -u`
++git commit -a -s -m "python3: update shebangs '^$sb'"
++
++git grep /env.*python > python.env
++
++grep -v ':#!/usr/bin/env python$' python.env |\
++grep -v ':#!/usr/bin/env python2$' |\
++grep -v ':#!/usr/bin/env python2.7$' |\
++grep -v ':#! /usr/bin/env python$' |\
++grep -v ':#! /usr/bin/env python2$' |\
++grep -v ':#!/usr/bin/env vpython$' |\
++grep -v ':#!/usr/bin/env vpython3$' |\
++grep -v ':#!/usr/bin/env python3$' |\
++grep -v ':#! /usr/bin/env python3$' > python.strange.shebangs
++
++#sed -i "s@/usr/bin/env python@/usr/bin/env python3@g" `sed 's/:.*//g' python.strange.shebangs | grep -v ^Binary.file | sort -u`
++
++git grep "^#!" > shebangs.txt
++grep -v python3 shebangs.txt | grep -v bin/sh | grep -v bash | grep -v vpython | grep -v mscgen | grep -v ^Binary.file | grep -v xdg-open | grep -v aws | grep -v env.node | grep -v env.ruby | grep -v tclsh | grep -v bin/tcl | grep -v env.perl | grep -v env.sh | grep -v bin/perl$ | grep -v osascript | grep -v bin/ruby$ | grep -v '$SHELL' | grep -v bin/make.-f$ | grep -v bin/perl.-w$ | grep -v /bin/true$ | grep -v bin/perl.-l$ | grep -v amber$ | grep -v powershell$ | grep -v '\.rs:#!\['

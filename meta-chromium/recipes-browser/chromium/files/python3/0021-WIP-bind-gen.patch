@@ -1,0 +1,26 @@
+From f53a2b881c20e29b234f546cfa25a036617de123 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 17:27:49 +0200
+Subject: [PATCH] WIP: bind-gen
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ .../blink/renderer/bindings/scripts/bind_gen/interface.py     | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/third_party/blink/renderer/bindings/scripts/bind_gen/interface.py b/third_party/blink/renderer/bindings/scripts/bind_gen/interface.py
+index ddf6e213ef..d9761918d0 100644
+--- a/third_party/blink/renderer/bindings/scripts/bind_gen/interface.py
++++ b/third_party/blink/renderer/bindings/scripts/bind_gen/interface.py
+@@ -2232,9 +2232,9 @@ def make_no_alloc_direct_call_callback_def(cg_context, function_name):
+         arg_list.append(
+             ArgumentInfo(v8_type, v8_arg_name, blink_arg_name, symbol_node))
+ 
+-    arg_decls = (["v8::Local<v8::Object> v8_arg0_receiver"] +
++    arg_decls = (["v8::Local<v8::Object> v8_arg0_receiver"] + list(
+                  map(lambda arg: "{} {}".format(arg.v8_type, arg.v8_arg_name),
+-                     arg_list) +
++                     arg_list))+
+                  ["v8::FastApiCallbackOptions& v8_arg_callback_options"])
+     return_type = ("void" if cg_context.operation.return_type.is_void else
+                    blink_type_info(cg_context.operation.return_type).value_t)

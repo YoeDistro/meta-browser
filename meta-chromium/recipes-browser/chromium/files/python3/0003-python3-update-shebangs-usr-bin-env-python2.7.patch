@@ -1,0 +1,691 @@
+From e11d15dda20ac63bb9d09bddbf9fdb7328fc6fcb Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Fri, 3 Sep 2021 16:15:47 +0200
+Subject: [PATCH] python3: update shebangs '^#!/usr/bin/env python2.7$'
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ base/android/jni_generator/jni_refactorer.py                    | 2 +-
+ chrome/android/monochrome/scripts/monochrome_python_tests.py    | 2 +-
+ net/data/ssl/scripts/generate-name-normalization-certs.py       | 2 +-
+ testing/libfuzzer/gen_fuzzer_owners.py                          | 2 +-
+ .../catapult/catapult_build/perfbot_stats/chrome_perf_stats.py  | 2 +-
+ .../catapult_build/perfbot_stats/chrome_perf_stats_unittest.py  | 2 +-
+ .../catapult_build/perfbot_stats/chrome_perf_step_timings.py    | 2 +-
+ third_party/catapult/systrace/bin/run_tests                     | 2 +-
+ third_party/catapult/tracing/bin/trace2html                     | 2 +-
+ third_party/grpc/src/src/abseil-cpp/gen_build_yaml.py           | 2 +-
+ third_party/grpc/src/src/benchmark/gen_build_yaml.py            | 2 +-
+ third_party/grpc/src/src/boringssl/gen_build_yaml.py            | 2 +-
+ third_party/grpc/src/src/c-ares/gen_build_yaml.py               | 2 +-
+ third_party/grpc/src/src/objective-c/change-comments.py         | 2 +-
+ third_party/grpc/src/src/proto/gen_build_yaml.py                | 2 +-
+ third_party/grpc/src/src/re2/gen_build_yaml.py                  | 2 +-
+ third_party/grpc/src/src/upb/gen_build_yaml.py                  | 2 +-
+ third_party/grpc/src/src/zlib/gen_build_yaml.py                 | 2 +-
+ third_party/grpc/src/test/core/bad_client/generate_tests.bzl    | 2 +-
+ third_party/grpc/src/test/core/bad_ssl/generate_tests.bzl       | 2 +-
+ .../fuzzers/generate_client_examples_of_bad_closing_streams.py  | 2 +-
+ third_party/grpc/src/test/core/end2end/generate_tests.bzl       | 2 +-
+ third_party/grpc/src/test/core/http/test_server.py              | 2 +-
+ third_party/grpc/src/test/cpp/naming/gen_build_yaml.py          | 2 +-
+ .../src/test/cpp/naming/generate_resolver_component_tests.bzl   | 2 +-
+ third_party/grpc/src/test/cpp/naming/utils/dns_resolver.py      | 2 +-
+ third_party/grpc/src/test/cpp/naming/utils/dns_server.py        | 2 +-
+ .../cpp/naming/utils/run_dns_server_for_lb_interop_tests.py     | 2 +-
+ third_party/grpc/src/test/cpp/naming/utils/tcp_connect.py       | 2 +-
+ third_party/grpc/src/test/cpp/qps/gen_build_yaml.py             | 2 +-
+ .../grpc/src/test/cpp/qps/json_run_localhost_scenario_gen.py    | 2 +-
+ .../grpc/src/test/cpp/qps/qps_json_driver_scenario_gen.py       | 2 +-
+ third_party/grpc/src/tools/buildgen/plugins/list_api.py         | 2 +-
+ third_party/grpc/src/tools/codegen/core/gen_header_frame.py     | 2 +-
+ .../core/gen_server_registered_method_bad_client_test_body.py   | 2 +-
+ third_party/grpc/src/tools/codegen/core/gen_settings_ids.py     | 2 +-
+ third_party/grpc/src/tools/codegen/core/gen_static_metadata.py  | 2 +-
+ third_party/grpc/src/tools/codegen/core/gen_stats_data.py       | 2 +-
+ third_party/grpc/src/tools/debug/core/chttp2_ref_leak.py        | 2 +-
+ third_party/grpc/src/tools/debug/core/error_ref_leak.py         | 2 +-
+ third_party/grpc/src/tools/distrib/c-ish/check_documentation.py | 2 +-
+ third_party/grpc/src/tools/distrib/python/docgen.py             | 2 +-
+ third_party/grpc/src/tools/distrib/python/submit.py             | 2 +-
+ third_party/grpc/src/tools/gcp/utils/big_query_utils.py         | 2 +-
+ third_party/grpc/src/tools/interop_matrix/client_matrix.py      | 2 +-
+ .../grpc/src/tools/interop_matrix/create_matrix_images.py       | 2 +-
+ .../grpc/src/tools/interop_matrix/run_interop_matrix_tests.py   | 2 +-
+ third_party/grpc/src/tools/profiling/bloat/bloat_diff.py        | 2 +-
+ .../src/tools/profiling/latency_profile/profile_analyzer.py     | 2 +-
+ third_party/grpc/src/tools/profiling/microbenchmarks/bm2bq.py   | 2 +-
+ .../src/tools/profiling/microbenchmarks/bm_diff/bm_build.py     | 2 +-
+ .../src/tools/profiling/microbenchmarks/bm_diff/bm_constants.py | 2 +-
+ .../grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_diff.py | 2 +-
+ .../grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_main.py | 2 +-
+ .../grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_run.py  | 2 +-
+ .../src/tools/profiling/microbenchmarks/bm_diff/bm_speedup.py   | 2 +-
+ third_party/grpc/src/tools/profiling/qps/qps_diff.py            | 2 +-
+ .../grpc/src/tools/run_tests/lb_interop_tests/gen_build_yaml.py | 2 +-
+ .../grpc/src/tools/run_tests/python_utils/port_server.py        | 2 +-
+ third_party/protobuf/benchmarks/util/big_query_utils.py         | 2 +-
+ third_party/skia/gn/codesign_ios.py                             | 2 +-
+ third_party/skia/gn/gen_plist_ios.py                            | 2 +-
+ 62 files changed, 62 insertions(+), 62 deletions(-)
+
+diff --git a/base/android/jni_generator/jni_refactorer.py b/base/android/jni_generator/jni_refactorer.py
+index c5519a6421..16039e2f0f 100755
+--- a/base/android/jni_generator/jni_refactorer.py
++++ b/base/android/jni_generator/jni_refactorer.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2018 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/chrome/android/monochrome/scripts/monochrome_python_tests.py b/chrome/android/monochrome/scripts/monochrome_python_tests.py
+index 08edc1c336..29586ebdf4 100755
+--- a/chrome/android/monochrome/scripts/monochrome_python_tests.py
++++ b/chrome/android/monochrome/scripts/monochrome_python_tests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2020 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/net/data/ssl/scripts/generate-name-normalization-certs.py b/net/data/ssl/scripts/generate-name-normalization-certs.py
+index 06429c1f0b..1759e41a8e 100755
+--- a/net/data/ssl/scripts/generate-name-normalization-certs.py
++++ b/net/data/ssl/scripts/generate-name-normalization-certs.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2019 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/testing/libfuzzer/gen_fuzzer_owners.py b/testing/libfuzzer/gen_fuzzer_owners.py
+index d6f493ff4c..afd1c36a5a 100755
+--- a/testing/libfuzzer/gen_fuzzer_owners.py
++++ b/testing/libfuzzer/gen_fuzzer_owners.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2018 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_stats.py b/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_stats.py
+index e98fddfd37..633e3e7e58 100755
+--- a/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_stats.py
++++ b/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_stats.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_stats_unittest.py b/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_stats_unittest.py
+index bb72bf1903..80a4056573 100644
+--- a/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_stats_unittest.py
++++ b/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_stats_unittest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_step_timings.py b/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_step_timings.py
+index 30558abd1f..9d014a169d 100755
+--- a/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_step_timings.py
++++ b/third_party/catapult/catapult_build/perfbot_stats/chrome_perf_step_timings.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/catapult/systrace/bin/run_tests b/third_party/catapult/systrace/bin/run_tests
+index 4944c368c6..ddf34901d8 100755
+--- a/third_party/catapult/systrace/bin/run_tests
++++ b/third_party/catapult/systrace/bin/run_tests
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+diff --git a/third_party/catapult/tracing/bin/trace2html b/third_party/catapult/tracing/bin/trace2html
+index e1e5670226..d467808538 100755
+--- a/third_party/catapult/tracing/bin/trace2html
++++ b/third_party/catapult/tracing/bin/trace2html
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright (c) 2014 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+diff --git a/third_party/grpc/src/src/abseil-cpp/gen_build_yaml.py b/third_party/grpc/src/src/abseil-cpp/gen_build_yaml.py
+index 889c44b4ea..e40ecb1872 100755
+--- a/third_party/grpc/src/src/abseil-cpp/gen_build_yaml.py
++++ b/third_party/grpc/src/src/abseil-cpp/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2019 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/src/benchmark/gen_build_yaml.py b/third_party/grpc/src/src/benchmark/gen_build_yaml.py
+index 45c39ffb97..e7296e0d7e 100755
+--- a/third_party/grpc/src/src/benchmark/gen_build_yaml.py
++++ b/third_party/grpc/src/src/benchmark/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/src/boringssl/gen_build_yaml.py b/third_party/grpc/src/src/boringssl/gen_build_yaml.py
+index 1b77fedad0..2cdcbf5da4 100755
+--- a/third_party/grpc/src/src/boringssl/gen_build_yaml.py
++++ b/third_party/grpc/src/src/boringssl/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/src/c-ares/gen_build_yaml.py b/third_party/grpc/src/src/c-ares/gen_build_yaml.py
+index d12203d703..eb3d704b5a 100755
+--- a/third_party/grpc/src/src/c-ares/gen_build_yaml.py
++++ b/third_party/grpc/src/src/c-ares/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/src/objective-c/change-comments.py b/third_party/grpc/src/src/objective-c/change-comments.py
+index 82645a419f..3459cbc69b 100755
+--- a/third_party/grpc/src/src/objective-c/change-comments.py
++++ b/third_party/grpc/src/src/objective-c/change-comments.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/src/proto/gen_build_yaml.py b/third_party/grpc/src/src/proto/gen_build_yaml.py
+index dea444ff40..5c8905fb15 100755
+--- a/third_party/grpc/src/src/proto/gen_build_yaml.py
++++ b/third_party/grpc/src/src/proto/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/src/re2/gen_build_yaml.py b/third_party/grpc/src/src/re2/gen_build_yaml.py
+index cd66a13e46..65d0259c27 100755
+--- a/third_party/grpc/src/src/re2/gen_build_yaml.py
++++ b/third_party/grpc/src/src/re2/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/src/upb/gen_build_yaml.py b/third_party/grpc/src/src/upb/gen_build_yaml.py
+index c2ceb9792d..0bb8097580 100755
+--- a/third_party/grpc/src/src/upb/gen_build_yaml.py
++++ b/third_party/grpc/src/src/upb/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/src/zlib/gen_build_yaml.py b/third_party/grpc/src/src/zlib/gen_build_yaml.py
+index c58ff8ab3a..cd6fe63194 100755
+--- a/third_party/grpc/src/src/zlib/gen_build_yaml.py
++++ b/third_party/grpc/src/src/zlib/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/test/core/bad_client/generate_tests.bzl b/third_party/grpc/src/test/core/bad_client/generate_tests.bzl
+index 272c2bb86a..276be918a7 100755
+--- a/third_party/grpc/src/test/core/bad_client/generate_tests.bzl
++++ b/third_party/grpc/src/test/core/bad_client/generate_tests.bzl
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/core/bad_ssl/generate_tests.bzl b/third_party/grpc/src/test/core/bad_ssl/generate_tests.bzl
+index 79e82b3093..08f36e60b7 100755
+--- a/third_party/grpc/src/test/core/bad_ssl/generate_tests.bzl
++++ b/third_party/grpc/src/test/core/bad_ssl/generate_tests.bzl
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/core/end2end/fuzzers/generate_client_examples_of_bad_closing_streams.py b/third_party/grpc/src/test/core/end2end/fuzzers/generate_client_examples_of_bad_closing_streams.py
+index cb47cae5cc..fe76bed2ee 100755
+--- a/third_party/grpc/src/test/core/end2end/fuzzers/generate_client_examples_of_bad_closing_streams.py
++++ b/third_party/grpc/src/test/core/end2end/fuzzers/generate_client_examples_of_bad_closing_streams.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/core/end2end/generate_tests.bzl b/third_party/grpc/src/test/core/end2end/generate_tests.bzl
+index f812e65e22..5131ac776f 100755
+--- a/third_party/grpc/src/test/core/end2end/generate_tests.bzl
++++ b/third_party/grpc/src/test/core/end2end/generate_tests.bzl
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/core/http/test_server.py b/third_party/grpc/src/test/core/http/test_server.py
+index 87f0a958d4..8ff521f867 100755
+--- a/third_party/grpc/src/test/core/http/test_server.py
++++ b/third_party/grpc/src/test/core/http/test_server.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/cpp/naming/gen_build_yaml.py b/third_party/grpc/src/test/cpp/naming/gen_build_yaml.py
+index eb278572af..f155a0d2a1 100755
+--- a/third_party/grpc/src/test/cpp/naming/gen_build_yaml.py
++++ b/third_party/grpc/src/test/cpp/naming/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/cpp/naming/generate_resolver_component_tests.bzl b/third_party/grpc/src/test/cpp/naming/generate_resolver_component_tests.bzl
+index c8dbee751a..0fd8d0ee28 100755
+--- a/third_party/grpc/src/test/cpp/naming/generate_resolver_component_tests.bzl
++++ b/third_party/grpc/src/test/cpp/naming/generate_resolver_component_tests.bzl
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/cpp/naming/utils/dns_resolver.py b/third_party/grpc/src/test/cpp/naming/utils/dns_resolver.py
+index 53f2301ca6..3718d96513 100755
+--- a/third_party/grpc/src/test/cpp/naming/utils/dns_resolver.py
++++ b/third_party/grpc/src/test/cpp/naming/utils/dns_resolver.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/cpp/naming/utils/dns_server.py b/third_party/grpc/src/test/cpp/naming/utils/dns_server.py
+index d70751f6eb..84b26e63ff 100755
+--- a/third_party/grpc/src/test/cpp/naming/utils/dns_server.py
++++ b/third_party/grpc/src/test/cpp/naming/utils/dns_server.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/cpp/naming/utils/run_dns_server_for_lb_interop_tests.py b/third_party/grpc/src/test/cpp/naming/utils/run_dns_server_for_lb_interop_tests.py
+index 217af5c0eb..7667d90eee 100755
+--- a/third_party/grpc/src/test/cpp/naming/utils/run_dns_server_for_lb_interop_tests.py
++++ b/third_party/grpc/src/test/cpp/naming/utils/run_dns_server_for_lb_interop_tests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/cpp/naming/utils/tcp_connect.py b/third_party/grpc/src/test/cpp/naming/utils/tcp_connect.py
+index 5f7273f4a9..40f13951ab 100755
+--- a/third_party/grpc/src/test/cpp/naming/utils/tcp_connect.py
++++ b/third_party/grpc/src/test/cpp/naming/utils/tcp_connect.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/test/cpp/qps/gen_build_yaml.py b/third_party/grpc/src/test/cpp/qps/gen_build_yaml.py
+index 4438b3ceb9..8a9d72eae8 100755
+--- a/third_party/grpc/src/test/cpp/qps/gen_build_yaml.py
++++ b/third_party/grpc/src/test/cpp/qps/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/test/cpp/qps/json_run_localhost_scenario_gen.py b/third_party/grpc/src/test/cpp/qps/json_run_localhost_scenario_gen.py
+index 8fe6848bdf..bc0baedccd 100755
+--- a/third_party/grpc/src/test/cpp/qps/json_run_localhost_scenario_gen.py
++++ b/third_party/grpc/src/test/cpp/qps/json_run_localhost_scenario_gen.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2018 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/test/cpp/qps/qps_json_driver_scenario_gen.py b/third_party/grpc/src/test/cpp/qps/qps_json_driver_scenario_gen.py
+index 01970a96b1..1ffc63c7c5 100755
+--- a/third_party/grpc/src/test/cpp/qps/qps_json_driver_scenario_gen.py
++++ b/third_party/grpc/src/test/cpp/qps/qps_json_driver_scenario_gen.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2018 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/buildgen/plugins/list_api.py b/third_party/grpc/src/tools/buildgen/plugins/list_api.py
+index 87a592d846..d4a121bff2 100755
+--- a/third_party/grpc/src/tools/buildgen/plugins/list_api.py
++++ b/third_party/grpc/src/tools/buildgen/plugins/list_api.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2016 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/codegen/core/gen_header_frame.py b/third_party/grpc/src/tools/codegen/core/gen_header_frame.py
+index 635b0b5a90..c4e65f392d 100755
+--- a/third_party/grpc/src/tools/codegen/core/gen_header_frame.py
++++ b/third_party/grpc/src/tools/codegen/core/gen_header_frame.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/codegen/core/gen_server_registered_method_bad_client_test_body.py b/third_party/grpc/src/tools/codegen/core/gen_server_registered_method_bad_client_test_body.py
+index 14fbb9ca52..ab00ea2c37 100755
+--- a/third_party/grpc/src/tools/codegen/core/gen_server_registered_method_bad_client_test_body.py
++++ b/third_party/grpc/src/tools/codegen/core/gen_server_registered_method_bad_client_test_body.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/codegen/core/gen_settings_ids.py b/third_party/grpc/src/tools/codegen/core/gen_settings_ids.py
+index fb035add81..dcad90b298 100755
+--- a/third_party/grpc/src/tools/codegen/core/gen_settings_ids.py
++++ b/third_party/grpc/src/tools/codegen/core/gen_settings_ids.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/codegen/core/gen_static_metadata.py b/third_party/grpc/src/tools/codegen/core/gen_static_metadata.py
+index 08cc139033..19df9b57f7 100755
+--- a/third_party/grpc/src/tools/codegen/core/gen_static_metadata.py
++++ b/third_party/grpc/src/tools/codegen/core/gen_static_metadata.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/codegen/core/gen_stats_data.py b/third_party/grpc/src/tools/codegen/core/gen_stats_data.py
+index f1bea06725..3c81f7eb23 100755
+--- a/third_party/grpc/src/tools/codegen/core/gen_stats_data.py
++++ b/third_party/grpc/src/tools/codegen/core/gen_stats_data.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/debug/core/chttp2_ref_leak.py b/third_party/grpc/src/tools/debug/core/chttp2_ref_leak.py
+index a6a5448775..8b279b9c72 100755
+--- a/third_party/grpc/src/tools/debug/core/chttp2_ref_leak.py
++++ b/third_party/grpc/src/tools/debug/core/chttp2_ref_leak.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2017 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/debug/core/error_ref_leak.py b/third_party/grpc/src/tools/debug/core/error_ref_leak.py
+index 125ec90aae..6b7b0f5773 100644
+--- a/third_party/grpc/src/tools/debug/core/error_ref_leak.py
++++ b/third_party/grpc/src/tools/debug/core/error_ref_leak.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/distrib/c-ish/check_documentation.py b/third_party/grpc/src/tools/distrib/c-ish/check_documentation.py
+index d17d7ebca0..b97b2c9052 100755
+--- a/third_party/grpc/src/tools/distrib/c-ish/check_documentation.py
++++ b/third_party/grpc/src/tools/distrib/c-ish/check_documentation.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ # Copyright 2015 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/distrib/python/docgen.py b/third_party/grpc/src/tools/distrib/python/docgen.py
+index d5bd4a1a7b..7c5a0b6f51 100755
+--- a/third_party/grpc/src/tools/distrib/python/docgen.py
++++ b/third_party/grpc/src/tools/distrib/python/docgen.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/distrib/python/submit.py b/third_party/grpc/src/tools/distrib/python/submit.py
+index 6ce6462b34..3a401504a4 100755
+--- a/third_party/grpc/src/tools/distrib/python/submit.py
++++ b/third_party/grpc/src/tools/distrib/python/submit.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/gcp/utils/big_query_utils.py b/third_party/grpc/src/tools/gcp/utils/big_query_utils.py
+index 6b61756546..958ec1f1cd 100755
+--- a/third_party/grpc/src/tools/gcp/utils/big_query_utils.py
++++ b/third_party/grpc/src/tools/gcp/utils/big_query_utils.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/interop_matrix/client_matrix.py b/third_party/grpc/src/tools/interop_matrix/client_matrix.py
+index 5e7b76cb0f..04ea582cee 100644
+--- a/third_party/grpc/src/tools/interop_matrix/client_matrix.py
++++ b/third_party/grpc/src/tools/interop_matrix/client_matrix.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2017 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/interop_matrix/create_matrix_images.py b/third_party/grpc/src/tools/interop_matrix/create_matrix_images.py
+index b413ab4c2c..9a384a7ca9 100755
+--- a/third_party/grpc/src/tools/interop_matrix/create_matrix_images.py
++++ b/third_party/grpc/src/tools/interop_matrix/create_matrix_images.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2017 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/interop_matrix/run_interop_matrix_tests.py b/third_party/grpc/src/tools/interop_matrix/run_interop_matrix_tests.py
+index be92458ea6..1259715ae0 100755
+--- a/third_party/grpc/src/tools/interop_matrix/run_interop_matrix_tests.py
++++ b/third_party/grpc/src/tools/interop_matrix/run_interop_matrix_tests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2017 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/profiling/bloat/bloat_diff.py b/third_party/grpc/src/tools/profiling/bloat/bloat_diff.py
+index 3dd4dbe01b..b6bd1de657 100755
+--- a/third_party/grpc/src/tools/profiling/bloat/bloat_diff.py
++++ b/third_party/grpc/src/tools/profiling/bloat/bloat_diff.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/profiling/latency_profile/profile_analyzer.py b/third_party/grpc/src/tools/profiling/latency_profile/profile_analyzer.py
+index 1966622f58..1affc1ccd9 100755
+--- a/third_party/grpc/src/tools/profiling/latency_profile/profile_analyzer.py
++++ b/third_party/grpc/src/tools/profiling/latency_profile/profile_analyzer.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/profiling/microbenchmarks/bm2bq.py b/third_party/grpc/src/tools/profiling/microbenchmarks/bm2bq.py
+index eedb5e76ab..fbd391e515 100755
+--- a/third_party/grpc/src/tools/profiling/microbenchmarks/bm2bq.py
++++ b/third_party/grpc/src/tools/profiling/microbenchmarks/bm2bq.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_build.py b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_build.py
+index 8cd993e6c1..344b0f23a0 100755
+--- a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_build.py
++++ b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_build.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_constants.py b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_constants.py
+index c8b6c1ebd0..ef60873118 100644
+--- a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_constants.py
++++ b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_constants.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_diff.py b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_diff.py
+index 3934b1e809..38875e2b8a 100755
+--- a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_diff.py
++++ b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_diff.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_main.py b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_main.py
+index 9add95f985..00f9db46e2 100755
+--- a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_main.py
++++ b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_main.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_run.py b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_run.py
+index 27fe0a18cc..51e8df4fcc 100755
+--- a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_run.py
++++ b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_run.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_speedup.py b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_speedup.py
+index d0d78cb376..1f59ad8706 100755
+--- a/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_speedup.py
++++ b/third_party/grpc/src/tools/profiling/microbenchmarks/bm_diff/bm_speedup.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/profiling/qps/qps_diff.py b/third_party/grpc/src/tools/profiling/qps/qps_diff.py
+index d36b96c3a1..5157f14caa 100755
+--- a/third_party/grpc/src/tools/profiling/qps/qps_diff.py
++++ b/third_party/grpc/src/tools/profiling/qps/qps_diff.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 gRPC authors.
+ #
+diff --git a/third_party/grpc/src/tools/run_tests/lb_interop_tests/gen_build_yaml.py b/third_party/grpc/src/tools/run_tests/lb_interop_tests/gen_build_yaml.py
+index 1a36e1e393..3a7251b61e 100755
+--- a/third_party/grpc/src/tools/run_tests/lb_interop_tests/gen_build_yaml.py
++++ b/third_party/grpc/src/tools/run_tests/lb_interop_tests/gen_build_yaml.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/grpc/src/tools/run_tests/python_utils/port_server.py b/third_party/grpc/src/tools/run_tests/python_utils/port_server.py
+index c934f832ab..c7b4e09112 100755
+--- a/third_party/grpc/src/tools/run_tests/python_utils/port_server.py
++++ b/third_party/grpc/src/tools/run_tests/python_utils/port_server.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ # Copyright 2015 gRPC authors.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/third_party/protobuf/benchmarks/util/big_query_utils.py b/third_party/protobuf/benchmarks/util/big_query_utils.py
+index aea55bbd89..beb013ba86 100755
+--- a/third_party/protobuf/benchmarks/util/big_query_utils.py
++++ b/third_party/protobuf/benchmarks/util/big_query_utils.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ import argparse
+diff --git a/third_party/skia/gn/codesign_ios.py b/third_party/skia/gn/codesign_ios.py
+index 6f546531c8..2bc0181e4a 100755
+--- a/third_party/skia/gn/codesign_ios.py
++++ b/third_party/skia/gn/codesign_ios.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 Google Inc.
+ #
+diff --git a/third_party/skia/gn/gen_plist_ios.py b/third_party/skia/gn/gen_plist_ios.py
+index b0076b2b81..5829479727 100755
+--- a/third_party/skia/gn/gen_plist_ios.py
++++ b/third_party/skia/gn/gen_plist_ios.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python3
+ #
+ # Copyright 2017 Google Inc.
+ #
